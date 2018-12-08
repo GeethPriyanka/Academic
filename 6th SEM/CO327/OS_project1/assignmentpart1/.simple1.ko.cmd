@@ -1,0 +1,1 @@
+cmd_/home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.ko /home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.o /home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.mod.o ;  true

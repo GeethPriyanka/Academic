@@ -1,0 +1,592 @@
+UID         PID   PPID    LWP  C NLWP STIME TTY          TIME CMD
+root          1      0      1  0    1 23:04 ?        00:00:03 /sbin/init auto noprompt
+root          2      0      2  0    1 23:04 ?        00:00:00 [kthreadd]
+root          4      2      4  0    1 23:04 ?        00:00:00 [kworker/0:0H]
+root          6      2      6  0    1 23:04 ?        00:00:00 [mm_percpu_wq]
+root          7      2      7  0    1 23:04 ?        00:00:00 [ksoftirqd/0]
+root          8      2      8  0    1 23:04 ?        00:00:01 [rcu_sched]
+root          9      2      9  0    1 23:04 ?        00:00:00 [rcu_bh]
+root         10      2     10  0    1 23:04 ?        00:00:00 [migration/0]
+root         11      2     11  0    1 23:04 ?        00:00:00 [watchdog/0]
+root         12      2     12  0    1 23:04 ?        00:00:00 [cpuhp/0]
+root         13      2     13  0    1 23:04 ?        00:00:00 [kdevtmpfs]
+root         14      2     14  0    1 23:04 ?        00:00:00 [netns]
+root         15      2     15  0    1 23:04 ?        00:00:00 [rcu_tasks_kthre]
+root         16      2     16  0    1 23:04 ?        00:00:00 [kauditd]
+root         17      2     17  0    1 23:04 ?        00:00:00 [khungtaskd]
+root         18      2     18  0    1 23:04 ?        00:00:00 [oom_reaper]
+root         19      2     19  0    1 23:04 ?        00:00:00 [writeback]
+root         20      2     20  0    1 23:04 ?        00:00:00 [kcompactd0]
+root         21      2     21  0    1 23:04 ?        00:00:00 [ksmd]
+root         22      2     22  0    1 23:04 ?        00:00:00 [khugepaged]
+root         23      2     23  0    1 23:04 ?        00:00:00 [crypto]
+root         24      2     24  0    1 23:04 ?        00:00:00 [kintegrityd]
+root         25      2     25  0    1 23:04 ?        00:00:00 [kblockd]
+root         26      2     26  0    1 23:04 ?        00:00:00 [ata_sff]
+root         27      2     27  0    1 23:04 ?        00:00:00 [md]
+root         28      2     28  0    1 23:04 ?        00:00:00 [edac-poller]
+root         29      2     29  0    1 23:04 ?        00:00:00 [devfreq_wq]
+root         30      2     30  0    1 23:04 ?        00:00:00 [watchdogd]
+root         32      2     32  0    1 23:04 ?        00:00:01 [kworker/0:1]
+root         34      2     34  0    1 23:04 ?        00:00:00 [kswapd0]
+root         35      2     35  0    1 23:04 ?        00:00:00 [ecryptfs-kthrea]
+root         77      2     77  0    1 23:04 ?        00:00:00 [kthrotld]
+root         78      2     78  0    1 23:04 ?        00:00:00 [acpi_thermal_pm]
+root         79      2     79  0    1 23:04 ?        00:00:00 [scsi_eh_0]
+root         80      2     80  0    1 23:04 ?        00:00:00 [scsi_tmf_0]
+root         81      2     81  0    1 23:04 ?        00:00:00 [scsi_eh_1]
+root         82      2     82  0    1 23:04 ?        00:00:00 [scsi_tmf_1]
+root         88      2     88  0    1 23:04 ?        00:00:00 [ipv6_addrconf]
+root         89      2     89  0    1 23:04 ?        00:00:00 [kworker/0:2]
+root         98      2     98  0    1 23:04 ?        00:00:00 [kstrp]
+root        115      2    115  0    1 23:04 ?        00:00:00 [charger_manager]
+root        165      2    165  0    1 23:04 ?        00:00:00 [mpt_poll_0]
+root        166      2    166  0    1 23:04 ?        00:00:00 [mpt/0]
+root        167      2    167  0    1 23:04 ?        00:00:00 [scsi_eh_2]
+root        168      2    168  0    1 23:04 ?        00:00:00 [scsi_tmf_2]
+root        169      2    169  0    1 23:04 ?        00:00:00 [scsi_eh_3]
+root        170      2    170  0    1 23:04 ?        00:00:00 [scsi_tmf_3]
+root        171      2    171  0    1 23:04 ?        00:00:00 [scsi_eh_4]
+root        172      2    172  0    1 23:04 ?        00:00:00 [scsi_tmf_4]
+root        173      2    173  0    1 23:04 ?        00:00:00 [scsi_eh_5]
+root        174      2    174  0    1 23:04 ?        00:00:00 [scsi_tmf_5]
+root        175      2    175  0    1 23:04 ?        00:00:00 [scsi_eh_6]
+root        176      2    176  0    1 23:04 ?        00:00:00 [scsi_tmf_6]
+root        177      2    177  0    1 23:04 ?        00:00:00 [scsi_eh_7]
+root        178      2    178  0    1 23:04 ?        00:00:00 [scsi_tmf_7]
+root        179      2    179  0    1 23:04 ?        00:00:00 [scsi_eh_8]
+root        180      2    180  0    1 23:04 ?        00:00:00 [scsi_tmf_8]
+root        181      2    181  0    1 23:04 ?        00:00:00 [scsi_eh_9]
+root        182      2    182  0    1 23:04 ?        00:00:00 [scsi_tmf_9]
+root        183      2    183  0    1 23:04 ?        00:00:00 [scsi_eh_10]
+root        184      2    184  0    1 23:04 ?        00:00:00 [scsi_tmf_10]
+root        185      2    185  0    1 23:04 ?        00:00:00 [scsi_eh_11]
+root        186      2    186  0    1 23:04 ?        00:00:00 [scsi_tmf_11]
+root        187      2    187  0    1 23:04 ?        00:00:00 [scsi_eh_12]
+root        188      2    188  0    1 23:04 ?        00:00:00 [scsi_tmf_12]
+root        189      2    189  0    1 23:04 ?        00:00:00 [scsi_eh_13]
+root        190      2    190  0    1 23:04 ?        00:00:00 [scsi_tmf_13]
+root        191      2    191  0    1 23:04 ?        00:00:00 [scsi_eh_14]
+root        192      2    192  0    1 23:04 ?        00:00:00 [scsi_tmf_14]
+root        193      2    193  0    1 23:04 ?        00:00:00 [scsi_eh_15]
+root        194      2    194  0    1 23:04 ?        00:00:00 [scsi_tmf_15]
+root        195      2    195  0    1 23:04 ?        00:00:00 [scsi_eh_16]
+root        196      2    196  0    1 23:04 ?        00:00:00 [scsi_tmf_16]
+root        197      2    197  0    1 23:04 ?        00:00:00 [scsi_eh_17]
+root        198      2    198  0    1 23:04 ?        00:00:00 [scsi_tmf_17]
+root        199      2    199  0    1 23:04 ?        00:00:00 [scsi_eh_18]
+root        200      2    200  0    1 23:04 ?        00:00:00 [scsi_tmf_18]
+root        201      2    201  0    1 23:04 ?        00:00:00 [scsi_eh_19]
+root        202      2    202  0    1 23:04 ?        00:00:00 [scsi_tmf_19]
+root        203      2    203  0    1 23:04 ?        00:00:00 [scsi_eh_20]
+root        204      2    204  0    1 23:04 ?        00:00:00 [scsi_tmf_20]
+root        205      2    205  0    1 23:04 ?        00:00:00 [scsi_eh_21]
+root        206      2    206  0    1 23:04 ?        00:00:00 [scsi_tmf_21]
+root        207      2    207  0    1 23:04 ?        00:00:00 [scsi_eh_22]
+root        208      2    208  0    1 23:04 ?        00:00:00 [scsi_tmf_22]
+root        209      2    209  0    1 23:04 ?        00:00:00 [scsi_eh_23]
+root        210      2    210  0    1 23:04 ?        00:00:00 [scsi_tmf_23]
+root        211      2    211  0    1 23:04 ?        00:00:00 [scsi_eh_24]
+root        212      2    212  0    1 23:04 ?        00:00:00 [scsi_tmf_24]
+root        213      2    213  0    1 23:04 ?        00:00:00 [scsi_eh_25]
+root        214      2    214  0    1 23:04 ?        00:00:00 [scsi_tmf_25]
+root        215      2    215  0    1 23:04 ?        00:00:00 [scsi_eh_26]
+root        216      2    216  0    1 23:04 ?        00:00:00 [scsi_tmf_26]
+root        217      2    217  0    1 23:04 ?        00:00:00 [scsi_eh_27]
+root        218      2    218  0    1 23:04 ?        00:00:00 [scsi_tmf_27]
+root        219      2    219  0    1 23:04 ?        00:00:00 [scsi_eh_28]
+root        220      2    220  0    1 23:04 ?        00:00:00 [scsi_tmf_28]
+root        221      2    221  0    1 23:04 ?        00:00:00 [scsi_eh_29]
+root        222      2    222  0    1 23:04 ?        00:00:00 [scsi_tmf_29]
+root        223      2    223  0    1 23:04 ?        00:00:00 [scsi_eh_30]
+root        224      2    224  0    1 23:04 ?        00:00:00 [scsi_tmf_30]
+root        225      2    225  0    1 23:04 ?        00:00:00 [scsi_eh_31]
+root        226      2    226  0    1 23:04 ?        00:00:00 [scsi_tmf_31]
+root        227      2    227  0    1 23:04 ?        00:00:00 [ttm_swap]
+root        228      2    228  0    1 23:04 ?        00:00:00 [scsi_eh_32]
+root        229      2    229  0    1 23:04 ?        00:00:00 [scsi_tmf_32]
+root        230      2    230  0    1 23:04 ?        00:00:00 [irq/16-vmwgfx]
+root        252      2    252  0    1 23:04 ?        00:00:00 [kworker/u256:26]
+root        254      2    254  0    1 23:04 ?        00:00:00 [kworker/u256:28]
+root        255      2    255  0    1 23:04 ?        00:00:00 [kworker/u256:29]
+root        259      2    259  0    1 23:04 ?        00:00:00 [kworker/0:1H]
+root        281      2    281  0    1 23:04 ?        00:00:00 [jbd2/sda1-8]
+root        282      2    282  0    1 23:04 ?        00:00:00 [ext4-rsv-conver]
+root        311      1    311  0    1 23:04 ?        00:00:00 /lib/systemd/systemd-journald
+root        330      1    330  0    1 23:04 ?        00:00:01 /lib/systemd/systemd-udevd
+root        352      2    352  0    1 23:04 ?        00:00:00 [loop0]
+root        353      2    353  0    1 23:04 ?        00:00:00 [loop1]
+root        354      2    354  0    1 23:04 ?        00:00:00 [loop2]
+root        355      2    355  0    1 23:04 ?        00:00:00 [loop3]
+root        356      2    356  0    1 23:04 ?        00:00:00 [loop4]
+root        357      2    357  0    1 23:04 ?        00:00:00 [loop5]
+root        358      2    358  0    1 23:04 ?        00:00:00 [loop6]
+root        359      2    359  0    1 23:04 ?        00:00:00 [loop7]
+root        360      2    360  0    1 23:04 ?        00:00:00 [loop8]
+root        361      2    361  0    1 23:04 ?        00:00:00 [loop9]
+root        362      2    362  0    1 23:04 ?        00:00:00 [loop10]
+root        363      2    363  0    1 23:04 ?        00:00:00 [loop11]
+root        364      2    364  0    1 23:04 ?        00:00:00 [loop12]
+root        365      2    365  0    1 23:04 ?        00:00:00 [loop13]
+root        366      2    366  0    1 23:04 ?        00:00:00 [loop14]
+root        367      2    367  0    1 23:04 ?        00:00:00 [loop15]
+root        372      2    372  0    1 23:04 ?        00:00:00 [loop16]
+root        382      1    382  0    3 23:04 ?        00:00:00 vmware-vmblock-fuse /run/vmblock-fuse -o rw,subtype=vmware-vmblock,default_permissions,allow_other,dev,suid
+root        382      1    383  0    3 23:04 ?        00:00:00 vmware-vmblock-fuse /run/vmblock-fuse -o rw,subtype=vmware-vmblock,default_permissions,allow_other,dev,suid
+root        382      1    384  0    3 23:04 ?        00:00:00 vmware-vmblock-fuse /run/vmblock-fuse -o rw,subtype=vmware-vmblock,default_permissions,allow_other,dev,suid
+root        385      1    385  0    1 23:04 ?        00:00:02 /usr/bin/vmtoolsd
+systemd+    426      1    426  0    1 23:04 ?        00:00:00 /lib/systemd/systemd-resolved
+systemd+    428      1    428  0    2 23:04 ?        00:00:00 /lib/systemd/systemd-timesyncd
+systemd+    428      1    432  0    2 23:04 ?        00:00:00 /lib/systemd/systemd-timesyncd
+syslog      627      1    627  0    4 23:05 ?        00:00:00 /usr/sbin/rsyslogd -n
+syslog      627      1    632  0    4 23:05 ?        00:00:00 /usr/sbin/rsyslogd -n
+syslog      627      1    633  0    4 23:05 ?        00:00:00 /usr/sbin/rsyslogd -n
+syslog      627      1    634  0    4 23:05 ?        00:00:00 /usr/sbin/rsyslogd -n
+root        629      1    629  0    5 23:05 ?        00:00:00 /usr/lib/udisks2/udisksd
+root        629      1    631  0    5 23:05 ?        00:00:00 /usr/lib/udisks2/udisksd
+root        629      1    636  0    5 23:05 ?        00:00:00 /usr/lib/udisks2/udisksd
+root        629      1    732  0    5 23:05 ?        00:00:00 /usr/lib/udisks2/udisksd
+root        629      1    747  0    5 23:05 ?        00:00:00 /usr/lib/udisks2/udisksd
+message+    630      1    630  0    1 23:05 ?        00:00:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root        637      1    637  0    1 23:05 ?        00:00:00 /usr/sbin/acpid
+root        638      1    638  0    2 23:05 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root        638      1    762  0    2 23:05 ?        00:00:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root        639      1    639  0    3 23:05 ?        00:00:00 /usr/sbin/ModemManager
+root        639      1    721  0    3 23:05 ?        00:00:00 /usr/sbin/ModemManager
+root        639      1    723  0    3 23:05 ?        00:00:00 /usr/sbin/ModemManager
+avahi       640      1    640  0    1 23:05 ?        00:00:00 avahi-daemon: running [ubuntu.local]
+root        642      1    642  0    1 23:05 ?        00:00:00 /usr/bin/VGAuthService
+root        644      1    644  0    3 23:05 ?        00:00:00 /usr/lib/accountsservice/accounts-daemon
+root        644      1    705  0    3 23:05 ?        00:00:00 /usr/lib/accountsservice/accounts-daemon
+root        644      1    707  0    3 23:05 ?        00:00:00 /usr/lib/accountsservice/accounts-daemon
+root        646      1    646  0    1 23:05 ?        00:00:00 /lib/systemd/systemd-logind
+root        650      1    650  0    1 23:05 ?        00:00:00 /usr/sbin/cupsd -l
+root        656      1    656  0    1 23:05 ?        00:00:00 /usr/sbin/cron -f
+root        664      1    664  0    3 23:05 ?        00:00:00 /usr/sbin/NetworkManager --no-daemon
+root        664      1    763  0    3 23:05 ?        00:00:00 /usr/sbin/NetworkManager --no-daemon
+root        664      1    770  0    3 23:05 ?        00:00:00 /usr/sbin/NetworkManager --no-daemon
+root        673      1    673  0    1 23:05 ?        00:00:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root        678      1    678  0    8 23:05 ?        00:00:00 /usr/lib/snapd/snapd
+root        678      1    768  0    8 23:05 ?        00:00:00 /usr/lib/snapd/snapd
+root        678      1    769  0    8 23:05 ?        00:00:00 /usr/lib/snapd/snapd
+root        678      1    772  0    8 23:05 ?        00:00:00 /usr/lib/snapd/snapd
+root        678      1    791  0    8 23:05 ?        00:00:00 /usr/lib/snapd/snapd
+root        678      1    792  0    8 23:05 ?        00:00:00 /usr/lib/snapd/snapd
+root        678      1    833  0    8 23:05 ?        00:00:00 /usr/lib/snapd/snapd
+root        678      1    975  0    8 23:05 ?        00:00:00 /usr/lib/snapd/snapd
+root        724      1    724  0    3 23:05 ?        00:00:00 /usr/lib/policykit-1/polkitd --no-debug
+root        724      1    725  0    3 23:05 ?        00:00:00 /usr/lib/policykit-1/polkitd --no-debug
+root        724      1    727  0    3 23:05 ?        00:00:00 /usr/lib/policykit-1/polkitd --no-debug
+avahi       745    640    745  0    1 23:05 ?        00:00:00 avahi-daemon: chroot helper
+root        748      1    748  0    3 23:05 ?        00:00:00 /usr/sbin/cups-browsed
+root        748      1    766  0    3 23:05 ?        00:00:00 /usr/sbin/cups-browsed
+root        748      1    767  0    3 23:05 ?        00:00:00 /usr/sbin/cups-browsed
+lp          764    650    764  0    1 23:05 ?        00:00:00 /usr/lib/cups/notifier/dbus dbus://
+root        786      1    786  0    3 23:05 ?        00:00:00 /usr/sbin/gdm3
+root        786      1    787  0    3 23:05 ?        00:00:00 /usr/sbin/gdm3
+root        786      1    788  0    3 23:05 ?        00:00:00 /usr/sbin/gdm3
+root        790    786    790  0    3 23:05 ?        00:00:00 gdm-session-worker [pam/gdm-launch-environment]
+root        790    786    794  0    3 23:05 ?        00:00:00 gdm-session-worker [pam/gdm-launch-environment]
+root        790    786    795  0    3 23:05 ?        00:00:00 gdm-session-worker [pam/gdm-launch-environment]
+root        793    664    793  0    1 23:05 ?        00:00:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-ens33.pid -lf /var/lib/NetworkManager/dhclient-c51ea5f7-3e3a-3134-af11-e9f3c320b2cc-ens33.lease -cf /var/lib/NetworkManager/dhclient-ens33.conf ens33
+whoopsie    829      1    829  0    3 23:05 ?        00:00:00 /usr/bin/whoopsie -f
+whoopsie    829      1    844  0    3 23:05 ?        00:00:00 /usr/bin/whoopsie -f
+whoopsie    829      1    845  0    3 23:05 ?        00:00:00 /usr/bin/whoopsie -f
+kernoops    840      1    840  0    1 23:05 ?        00:00:00 /usr/sbin/kerneloops --test
+kernoops    846      1    846  0    1 23:05 ?        00:00:00 /usr/sbin/kerneloops
+gdm         887      1    887  0    1 23:05 ?        00:00:00 /lib/systemd/systemd --user
+gdm         888    887    888  0    1 23:05 ?        00:00:00 (sd-pam)
+gdm         900    790    900  0    3 23:05 tty1     00:00:00 /usr/lib/gdm3/gdm-wayland-session gnome-session --autostart /usr/share/gdm/greeter/autostart
+gdm         900    790    901  0    3 23:05 tty1     00:00:00 /usr/lib/gdm3/gdm-wayland-session gnome-session --autostart /usr/share/gdm/greeter/autostart
+gdm         900    790    903  0    3 23:05 tty1     00:00:00 /usr/lib/gdm3/gdm-wayland-session gnome-session --autostart /usr/share/gdm/greeter/autostart
+gdm         902    887    902  0    1 23:05 ?        00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+gdm         904    900    904  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-session/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+gdm         904    900    905  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-session/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+gdm         904    900    906  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-session/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+gdm         904    900    908  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-session/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+gdm         910    904    910  0   10 23:05 tty1     00:00:04 /usr/bin/gnome-shell
+gdm         910    904    913  0   10 23:05 tty1     00:00:00 /usr/bin/gnome-shell
+gdm         910    904    914  0   10 23:05 tty1     00:00:00 /usr/bin/gnome-shell
+gdm         910    904    915  0   10 23:05 tty1     00:00:00 /usr/bin/gnome-shell
+gdm         910    904    944  0   10 23:05 tty1     00:00:00 /usr/bin/gnome-shell
+gdm         910    904    950  0   10 23:05 tty1     00:00:00 /usr/bin/gnome-shell
+gdm         910    904    951  0   10 23:05 tty1     00:00:00 /usr/bin/gnome-shell
+gdm         910    904    952  0   10 23:05 tty1     00:00:00 /usr/bin/gnome-shell
+gdm         910    904    953  0   10 23:05 tty1     00:00:00 /usr/bin/gnome-shell
+gdm         910    904    954  0   10 23:05 tty1     00:00:00 /usr/bin/gnome-shell
+root        917      1    917  0    3 23:05 ?        00:00:00 /usr/lib/upower/upowerd
+root        917      1    918  0    3 23:05 ?        00:00:00 /usr/lib/upower/upowerd
+root        917      1    919  0    3 23:05 ?        00:00:00 /usr/lib/upower/upowerd
+gdm         930    910    930  0    1 23:05 tty1     00:00:00 /usr/bin/Xwayland :1024 -rootless -terminate -accessx -core -listen 4 -listen 5 -displayfd 6
+gdm         933    887    933  0    4 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+gdm         933    887    934  0    4 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+gdm         933    887    935  0    4 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+gdm         933    887    937  0    4 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+gdm         938    933    938  0    1 23:05 ?        00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+gdm         940    887    940  0    3 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+gdm         940    887    941  0    3 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+gdm         940    887    942  0    3 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+gdm         943    887    943  0    3 23:05 ?        00:00:00 /usr/bin/pulseaudio --daemonize=no
+gdm         943    887    948  0    3 23:05 ?        00:00:00 /usr/bin/pulseaudio --daemonize=no
+gdm         943    887    949  0    3 23:05 ?        00:00:00 /usr/bin/pulseaudio --daemonize=no
+rtkit       945      1    945  0    3 23:05 ?        00:00:00 /usr/lib/rtkit/rtkit-daemon
+rtkit       945      1    946  0    3 23:05 ?        00:00:00 /usr/lib/rtkit/rtkit-daemon
+rtkit       945      1    947  0    3 23:05 ?        00:00:00 /usr/lib/rtkit/rtkit-daemon
+gdm         957    910    957  0    3 23:05 tty1     00:00:00 ibus-daemon --xim --panel disable
+gdm         957    910    958  0    3 23:05 tty1     00:00:00 ibus-daemon --xim --panel disable
+gdm         957    910    961  0    3 23:05 tty1     00:00:00 ibus-daemon --xim --panel disable
+gdm         960    957    960  0    4 23:05 tty1     00:00:00 /usr/lib/ibus/ibus-dconf
+gdm         960    957    963  0    4 23:05 tty1     00:00:00 /usr/lib/ibus/ibus-dconf
+gdm         960    957    970  0    4 23:05 tty1     00:00:00 /usr/lib/ibus/ibus-dconf
+gdm         960    957    973  0    4 23:05 tty1     00:00:00 /usr/lib/ibus/ibus-dconf
+gdm         964      1    964  0    3 23:05 tty1     00:00:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+gdm         964      1   1067  0    3 23:05 tty1     00:00:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+gdm         964      1   1068  0    3 23:05 tty1     00:00:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+gdm         967    887    967  0    3 23:05 ?        00:00:00 /usr/lib/ibus/ibus-portal
+gdm         967    887    968  0    3 23:05 ?        00:00:00 /usr/lib/ibus/ibus-portal
+gdm         967    887    971  0    3 23:05 ?        00:00:00 /usr/lib/ibus/ibus-portal
+root        980      1    980  0    3 23:05 ?        00:00:00 /usr/lib/x86_64-linux-gnu/boltd
+root        980      1    983  0    3 23:05 ?        00:00:00 /usr/lib/x86_64-linux-gnu/boltd
+root        980      1    985  0    3 23:05 ?        00:00:00 /usr/lib/x86_64-linux-gnu/boltd
+root        981      1    981  0    3 23:05 ?        00:00:00 /usr/lib/packagekit/packagekitd
+root        981      1    989  0    3 23:05 ?        00:00:00 /usr/lib/packagekit/packagekitd
+root        981      1    990  0    3 23:05 ?        00:00:00 /usr/lib/packagekit/packagekitd
+gdm         982    904    982  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+gdm         982    904   1070  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+gdm         982    904   1071  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+gdm         982    904   1073  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+gdm         988    904    988  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+gdm         988    904    993  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+gdm         988    904    994  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+gdm         988    904   1032  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+gdm         992    904    992  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+gdm         992    904   1058  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+gdm         992    904   1059  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+gdm         995    904    995  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-color
+gdm         995    904   1054  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-color
+gdm         995    904   1055  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-color
+gdm         995    904   1057  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-color
+gdm         996    904    996  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+gdm         996    904   1008  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+gdm         996    904   1009  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+gdm         998    904    998  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+gdm         998    904   1001  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+gdm         998    904   1003  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+gdm        1000    904   1000  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+gdm        1000    904   1044  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+gdm        1000    904   1045  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+gdm        1000    904   1046  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+gdm        1004    904   1004  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+gdm        1004    904   1051  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+gdm        1004    904   1052  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+gdm        1004    904   1065  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+gdm        1005    904   1005  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+gdm        1005    904   1007  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+gdm        1005    904   1010  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+gdm        1006    904   1006  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-power
+gdm        1006    904   1048  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-power
+gdm        1006    904   1050  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-power
+gdm        1006    904   1053  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-power
+gdm        1011    904   1011  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+gdm        1011    904   1015  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+gdm        1011    904   1019  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+gdm        1012    904   1012  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+gdm        1012    904   1014  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+gdm        1012    904   1020  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+gdm        1013    904   1013  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+gdm        1013    904   1017  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+gdm        1013    904   1022  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+gdm        1016    904   1016  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+gdm        1016    904   1023  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+gdm        1016    904   1024  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+gdm        1016    904   1025  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+gdm        1021    904   1021  0    5 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+gdm        1021    904   1027  0    5 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+gdm        1021    904   1028  0    5 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+gdm        1021    904   1033  0    5 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+gdm        1021    904   1037  0    5 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+gdm        1026    904   1026  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sound
+gdm        1026    904   1030  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sound
+gdm        1026    904   1031  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sound
+gdm        1026    904   1034  0    4 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sound
+gdm        1029    904   1029  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+gdm        1029    904   1063  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+gdm        1029    904   1064  0    3 23:05 tty1     00:00:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+gdm        1039    957   1039  0    3 23:05 tty1     00:00:00 /usr/lib/ibus/ibus-engine-simple
+gdm        1039    957   1040  0    3 23:05 tty1     00:00:00 /usr/lib/ibus/ibus-engine-simple
+gdm        1039    957   1041  0    3 23:05 tty1     00:00:00 /usr/lib/ibus/ibus-engine-simple
+colord     1069      1   1069  0    3 23:05 ?        00:00:00 /usr/lib/colord/colord
+colord     1069      1   1076  0    3 23:05 ?        00:00:00 /usr/lib/colord/colord
+colord     1069      1   1078  0    3 23:05 ?        00:00:00 /usr/lib/colord/colord
+root       1086    786   1086  0    3 23:05 ?        00:00:00 gdm-session-worker [pam/gdm-password]
+root       1086    786   1087  0    3 23:05 ?        00:00:00 gdm-session-worker [pam/gdm-password]
+root       1086    786   1088  0    3 23:05 ?        00:00:00 gdm-session-worker [pam/gdm-password]
+geeth      1089      1   1089  0    1 23:05 ?        00:00:00 /lib/systemd/systemd --user
+geeth      1090   1089   1090  0    1 23:05 ?        00:00:00 (sd-pam)
+geeth      1103      1   1103  0    4 23:05 ?        00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+geeth      1103      1   1104  0    4 23:05 ?        00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+geeth      1103      1   1105  0    4 23:05 ?        00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+geeth      1103      1   1223  0    4 23:05 ?        00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+geeth      1107   1086   1107  0    3 23:05 tty2     00:00:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+geeth      1107   1086   1108  0    3 23:05 tty2     00:00:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+geeth      1107   1086   1118  0    3 23:05 tty2     00:00:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+geeth      1109   1107   1109  2    2 23:05 tty2     00:00:38 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+geeth      1109   1107   1117  0    2 23:05 tty2     00:00:03 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -background none -noreset -keeptty -verbose 3
+geeth      1116   1089   1116  0    1 23:05 ?        00:00:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+geeth      1120   1107   1120  0    4 23:05 tty2     00:00:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+geeth      1120   1107   1210  0    4 23:05 tty2     00:00:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+geeth      1120   1107   1211  0    4 23:05 tty2     00:00:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+geeth      1120   1107   1213  0    4 23:05 tty2     00:00:00 /usr/lib/gnome-session/gnome-session-binary --session=ubuntu
+geeth      1197   1120   1197  0    1 23:05 ?        00:00:00 /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SESSION_MODE=ubuntu gnome-session --session=ubuntu
+geeth      1199   1089   1199  0    4 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+geeth      1199   1089   1200  0    4 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+geeth      1199   1089   1201  0    4 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+geeth      1199   1089   1203  0    4 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+geeth      1204   1199   1204  0    1 23:05 ?        00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+geeth      1207   1089   1207  0    3 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+geeth      1207   1089   1208  0    3 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+geeth      1207   1089   1209  0    3 23:05 ?        00:00:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+geeth      1224   1120   1224  5   10 23:05 tty2     00:01:23 /usr/bin/gnome-shell
+geeth      1224   1120   1226  0   10 23:05 tty2     00:00:00 /usr/bin/gnome-shell
+geeth      1224   1120   1227  0   10 23:05 tty2     00:00:00 /usr/bin/gnome-shell
+geeth      1224   1120   1229  0   10 23:05 tty2     00:00:00 /usr/bin/gnome-shell
+geeth      1224   1120   1249  0   10 23:05 tty2     00:00:00 /usr/bin/gnome-shell
+geeth      1224   1120   1250  0   10 23:05 tty2     00:00:00 /usr/bin/gnome-shell
+geeth      1224   1120   1251  0   10 23:05 tty2     00:00:00 /usr/bin/gnome-shell
+geeth      1224   1120   1252  0   10 23:05 tty2     00:00:00 /usr/bin/gnome-shell
+geeth      1224   1120   1253  0   10 23:05 tty2     00:00:00 /usr/bin/gnome-shell
+geeth      1224   1120   1254  0   10 23:05 tty2     00:00:00 /usr/bin/gnome-shell
+geeth      1230   1089   1230  0    3 23:05 ?        00:00:00 /usr/lib/gvfs/gvfsd
+geeth      1230   1089   1231  0    3 23:05 ?        00:00:00 /usr/lib/gvfs/gvfsd
+geeth      1230   1089   1232  0    3 23:05 ?        00:00:00 /usr/lib/gvfs/gvfsd
+geeth      1235   1089   1235  0    6 23:05 ?        00:00:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+geeth      1235   1089   1237  0    6 23:05 ?        00:00:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+geeth      1235   1089   1239  0    6 23:05 ?        00:00:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+geeth      1235   1089   1240  0    6 23:05 ?        00:00:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+geeth      1235   1089   1241  0    6 23:05 ?        00:00:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+geeth      1235   1089   1242  0    6 23:05 ?        00:00:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+geeth      1246      1   1246  0    3 23:05 ?        00:00:00 /usr/bin/pulseaudio --start --log-target=syslog
+geeth      1246      1   1247  0    3 23:05 ?        00:00:02 /usr/bin/pulseaudio --start --log-target=syslog
+geeth      1246      1   1248  0    3 23:05 ?        00:00:00 /usr/bin/pulseaudio --start --log-target=syslog
+geeth      1256   1224   1256  0    3 23:05 tty2     00:00:00 ibus-daemon --xim --panel disable
+geeth      1256   1224   1257  0    3 23:05 tty2     00:00:00 ibus-daemon --xim --panel disable
+geeth      1256   1224   1258  0    3 23:05 tty2     00:00:01 ibus-daemon --xim --panel disable
+geeth      1260   1256   1260  0    4 23:05 tty2     00:00:00 /usr/lib/ibus/ibus-dconf
+geeth      1260   1256   1263  0    4 23:05 tty2     00:00:00 /usr/lib/ibus/ibus-dconf
+geeth      1260   1256   1270  0    4 23:05 tty2     00:00:00 /usr/lib/ibus/ibus-dconf
+geeth      1260   1256   1271  0    4 23:05 tty2     00:00:00 /usr/lib/ibus/ibus-dconf
+geeth      1262      1   1262  0    3 23:05 tty2     00:00:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+geeth      1262      1   1272  0    3 23:05 tty2     00:00:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+geeth      1262      1   1273  0    3 23:05 tty2     00:00:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+geeth      1265   1089   1265  0    3 23:05 ?        00:00:00 /usr/lib/ibus/ibus-portal
+geeth      1265   1089   1266  0    3 23:05 ?        00:00:00 /usr/lib/ibus/ibus-portal
+geeth      1265   1089   1268  0    3 23:05 ?        00:00:00 /usr/lib/ibus/ibus-portal
+geeth      1275   1089   1275  0    6 23:05 ?        00:00:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+geeth      1275   1089   1278  0    6 23:05 ?        00:00:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+geeth      1275   1089   1280  0    6 23:05 ?        00:00:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+geeth      1275   1089   1318  0    6 23:06 ?        00:00:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+geeth      1275   1089   1319  0    6 23:06 ?        00:00:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+geeth      1275   1089   1455  0    6 23:06 ?        00:00:00 /usr/lib/gnome-shell/gnome-shell-calendar-server
+geeth      1282   1089   1282  0    4 23:05 ?        00:00:00 /usr/lib/evolution/evolution-source-registry
+geeth      1282   1089   1292  0    4 23:06 ?        00:00:00 /usr/lib/evolution/evolution-source-registry
+geeth      1282   1089   1293  0    4 23:06 ?        00:00:00 /usr/lib/evolution/evolution-source-registry
+geeth      1282   1089   1294  0    4 23:06 ?        00:00:00 /usr/lib/evolution/evolution-source-registry
+geeth      1288   1089   1288  0    3 23:05 ?        00:00:00 /usr/lib/dconf/dconf-service
+geeth      1288   1089   1289  0    3 23:06 ?        00:00:00 /usr/lib/dconf/dconf-service
+geeth      1288   1089   1290  0    3 23:06 ?        00:00:00 /usr/lib/dconf/dconf-service
+geeth      1291   1089   1291  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+geeth      1291   1089   1295  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+geeth      1291   1089   1296  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+geeth      1298   1089   1298  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+geeth      1298   1089   1299  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+geeth      1298   1089   1301  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+geeth      1302   1089   1302  0    4 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+geeth      1302   1089   1303  0    4 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+geeth      1302   1089   1304  0    4 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+geeth      1302   1089   1306  0    4 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+geeth      1307   1089   1307  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+geeth      1307   1089   1308  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+geeth      1307   1089   1310  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+geeth      1311   1089   1311  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+geeth      1311   1089   1312  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+geeth      1311   1089   1313  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+geeth      1315   1089   1315  0    4 23:06 ?        00:00:00 /usr/lib/gnome-online-accounts/goa-daemon
+geeth      1315   1089   1320  0    4 23:06 ?        00:00:00 /usr/lib/gnome-online-accounts/goa-daemon
+geeth      1315   1089   1322  0    4 23:06 ?        00:00:00 /usr/lib/gnome-online-accounts/goa-daemon
+geeth      1315   1089   1323  0    4 23:06 ?        00:00:00 /usr/lib/gnome-online-accounts/goa-daemon
+geeth      1327   1089   1327  0    4 23:06 ?        00:00:00 /usr/lib/gnome-online-accounts/goa-identity-service
+geeth      1327   1089   1329  0    4 23:06 ?        00:00:00 /usr/lib/gnome-online-accounts/goa-identity-service
+geeth      1327   1089   1330  0    4 23:06 ?        00:00:00 /usr/lib/gnome-online-accounts/goa-identity-service
+geeth      1327   1089   1331  0    4 23:06 ?        00:00:00 /usr/lib/gnome-online-accounts/goa-identity-service
+geeth      1333   1120   1333  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+geeth      1333   1120   1337  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+geeth      1333   1120   1339  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+geeth      1333   1120   1389  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+geeth      1334   1120   1334  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-power
+geeth      1334   1120   1367  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-power
+geeth      1334   1120   1370  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-power
+geeth      1334   1120   1395  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-power
+geeth      1336   1120   1336  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+geeth      1336   1120   1342  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+geeth      1336   1120   1351  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+geeth      1338   1120   1338  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+geeth      1338   1120   1346  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+geeth      1338   1120   1347  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+geeth      1340   1120   1340  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+geeth      1340   1120   1344  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+geeth      1340   1120   1349  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-screensaver-proxy
+geeth      1341   1120   1341  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+geeth      1341   1120   1352  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+geeth      1341   1120   1353  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+geeth      1341   1120   1360  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sharing
+geeth      1343   1120   1343  0    5 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+geeth      1343   1120   1354  0    5 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+geeth      1343   1120   1358  0    5 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+geeth      1343   1120   1383  0    5 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+geeth      1343   1120   1396  0    5 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+geeth      1348   1120   1348  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sound
+geeth      1348   1120   1357  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sound
+geeth      1348   1120   1363  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sound
+geeth      1348   1120   1390  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-sound
+geeth      1350   1120   1350  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+geeth      1350   1120   1374  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+geeth      1350   1120   1375  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+geeth      1355   1120   1355  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+geeth      1355   1120   1372  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+geeth      1355   1120   1373  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+geeth      1355   1120   1393  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+geeth      1365   1120   1365  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+geeth      1365   1120   1369  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+geeth      1365   1120   1371  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+geeth      1365   1120   1391  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+geeth      1377   1120   1377  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-color
+geeth      1377   1120   1414  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-color
+geeth      1377   1120   1415  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-color
+geeth      1377   1120   1417  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-color
+geeth      1378   1120   1378  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+geeth      1378   1120   1406  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+geeth      1378   1120   1407  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+geeth      1378   1120   1410  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+geeth      1379   1120   1379  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+geeth      1379   1120   1405  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+geeth      1379   1120   1408  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+geeth      1380   1120   1380  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+geeth      1380   1120   1411  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+geeth      1380   1120   1412  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+geeth      1380   1120   1416  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+geeth      1381   1120   1381  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+geeth      1381   1120   1419  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+geeth      1381   1120   1426  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+geeth      1381   1120   1454  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+geeth      1382   1120   1382  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+geeth      1382   1120   1397  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+geeth      1382   1120   1402  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+geeth      1382   1120   1404  0    4 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+geeth      1401      1   1401  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-printer
+geeth      1401      1   1413  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-printer
+geeth      1401      1   1418  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-settings-daemon/gsd-printer
+geeth      1431   1120   1431  0    5 23:06 tty2     00:00:02 nautilus-desktop
+geeth      1431   1120   1474  0    5 23:06 tty2     00:00:00 nautilus-desktop
+geeth      1431   1120   1475  0    5 23:06 tty2     00:00:00 nautilus-desktop
+geeth      1431   1120   1495  0    5 23:06 tty2     00:00:00 nautilus-desktop
+geeth      1431   1120   2120  0    5 23:08 tty2     00:00:00 nautilus-desktop
+geeth      1432      1   1432  0    4 23:06 tty2     00:00:02 /usr/bin/vmtoolsd -n vmusr --blockFd 3
+geeth      1432      1   1482  0    4 23:06 tty2     00:00:00 /usr/bin/vmtoolsd -n vmusr --blockFd 3
+geeth      1432      1   1483  0    4 23:06 tty2     00:00:00 /usr/bin/vmtoolsd -n vmusr --blockFd 3
+geeth      1432      1   1494  0    4 23:06 tty2     00:00:00 /usr/bin/vmtoolsd -n vmusr --blockFd 3
+geeth      1436   1120   1436  0    4 23:06 tty2     00:00:03 /usr/bin/gnome-software --gapplication-service
+geeth      1436   1120   1446  0    4 23:06 tty2     00:00:00 /usr/bin/gnome-software --gapplication-service
+geeth      1436   1120   1447  0    4 23:06 tty2     00:00:00 /usr/bin/gnome-software --gapplication-service
+geeth      1436   1120   1448  0    4 23:06 tty2     00:00:00 /usr/bin/gnome-software --gapplication-service
+geeth      1441   1120   1441  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+geeth      1441   1120   1442  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+geeth      1441   1120   1445  0    3 23:06 tty2     00:00:00 /usr/lib/gnome-disk-utility/gsd-disk-utility-notify
+geeth      1456   1089   1456  0    5 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory
+geeth      1456   1089   1504  0    5 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory
+geeth      1456   1089   1505  0    5 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory
+geeth      1456   1089   1506  0    5 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory
+geeth      1456   1089   1507  0    5 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory
+geeth      1466   1256   1466  0    3 23:06 tty2     00:00:00 /usr/lib/ibus/ibus-engine-simple
+geeth      1466   1256   1467  0    3 23:06 tty2     00:00:00 /usr/lib/ibus/ibus-engine-simple
+geeth      1466   1256   1468  0    3 23:06 tty2     00:00:00 /usr/lib/ibus/ibus-engine-simple
+geeth      1476   1230   1476  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.13 /org/gtk/gvfs/exec_spaw/0
+geeth      1476   1230   1477  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.13 /org/gtk/gvfs/exec_spaw/0
+geeth      1476   1230   1478  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.13 /org/gtk/gvfs/exec_spaw/0
+geeth      1510   1456   1510  0    9 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1456x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1456/2
+geeth      1510   1456   1511  0    9 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1456x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1456/2
+geeth      1510   1456   1512  0    9 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1456x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1456/2
+geeth      1510   1456   1513  0    9 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1456x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1456/2
+geeth      1510   1456   1514  0    9 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1456x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1456/2
+geeth      1510   1456   1517  0    9 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1456x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1456/2
+geeth      1510   1456   1519  0    9 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1456x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1456/2
+geeth      1510   1456   1520  0    9 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1456x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1456/2
+geeth      1510   1456   1522  0    9 23:06 ?        00:00:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx1456x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/1456/2
+geeth      1523   1089   1523  0    5 23:06 ?        00:00:00 /usr/lib/evolution/evolution-addressbook-factory
+geeth      1523   1089   1526  0    5 23:06 ?        00:00:00 /usr/lib/evolution/evolution-addressbook-factory
+geeth      1523   1089   1527  0    5 23:06 ?        00:00:00 /usr/lib/evolution/evolution-addressbook-factory
+geeth      1523   1089   1528  0    5 23:06 ?        00:00:00 /usr/lib/evolution/evolution-addressbook-factory
+geeth      1523   1089   1529  0    5 23:06 ?        00:00:00 /usr/lib/evolution/evolution-addressbook-factory
+geeth      1532   1523   1532  0    6 23:06 ?        00:00:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx1523x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/1523/2
+geeth      1532   1523   1533  0    6 23:06 ?        00:00:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx1523x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/1523/2
+geeth      1532   1523   1535  0    6 23:06 ?        00:00:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx1523x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/1523/2
+geeth      1532   1523   1536  0    6 23:06 ?        00:00:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx1523x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/1523/2
+geeth      1532   1523   1537  0    6 23:06 ?        00:00:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx1523x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/1523/2
+geeth      1532   1523   1539  0    6 23:06 ?        00:00:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx1523x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/1523/2
+geeth      1546   1089   1546  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfsd-metadata
+geeth      1546   1089   1547  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfsd-metadata
+geeth      1546   1089   1548  0    3 23:06 ?        00:00:00 /usr/lib/gvfs/gvfsd-metadata
+root       1552      1   1552  0    5 23:06 ?        00:00:00 /usr/lib/fwupd/fwupd
+root       1552      1   1553  0    5 23:06 ?        00:00:00 /usr/lib/fwupd/fwupd
+root       1552      1   1554  0    5 23:06 ?        00:00:00 /usr/lib/fwupd/fwupd
+root       1552      1   1555  0    5 23:06 ?        00:00:00 /usr/lib/fwupd/fwupd
+root       1552      1   1556  0    5 23:06 ?        00:00:00 /usr/lib/fwupd/fwupd
+geeth      1582   1089   1582  0    6 23:06 ?        00:00:12 /usr/bin/nautilus --gapplication-service
+geeth      1582   1089   1583  0    6 23:06 ?        00:00:00 /usr/bin/nautilus --gapplication-service
+geeth      1582   1089   1584  0    6 23:06 ?        00:00:00 /usr/bin/nautilus --gapplication-service
+geeth      1582   1089   1586  0    6 23:06 ?        00:00:00 /usr/bin/nautilus --gapplication-service
+geeth      1582   1089   1587  0    6 23:06 ?        00:00:00 /usr/bin/nautilus --gapplication-service
+geeth      1582   1089   4363  0    6 23:32 ?        00:00:00 /usr/bin/nautilus --gapplication-service
+geeth      1624   1120   1624  0    4 23:07 tty2     00:00:00 update-notifier
+geeth      1624   1120   1627  0    4 23:07 tty2     00:00:00 update-notifier
+geeth      1624   1120   1628  0    4 23:07 tty2     00:00:00 update-notifier
+geeth      1624   1120   1629  0    4 23:07 tty2     00:00:00 update-notifier
+geeth      1640   1089   1640  0    3 23:07 ?        00:00:00 /usr/bin/zeitgeist-daemon
+geeth      1640   1089   1641  0    3 23:07 ?        00:00:00 /usr/bin/zeitgeist-daemon
+geeth      1640   1089   1642  0    3 23:07 ?        00:00:00 /usr/bin/zeitgeist-daemon
+geeth      1648   1089   1648  0    3 23:07 ?        00:00:00 /usr/lib/zeitgeist/zeitgeist/zeitgeist-fts
+geeth      1648   1089   1650  0    3 23:07 ?        00:00:00 /usr/lib/zeitgeist/zeitgeist/zeitgeist-fts
+geeth      1648   1089   1651  0    3 23:07 ?        00:00:00 /usr/lib/zeitgeist/zeitgeist/zeitgeist-fts
+geeth      2104   1120   2104  0    4 23:08 tty2     00:00:00 /usr/lib/deja-dup/deja-dup-monitor
+geeth      2104   1120   2107  0    4 23:08 tty2     00:00:00 /usr/lib/deja-dup/deja-dup-monitor
+geeth      2104   1120   2108  0    4 23:08 tty2     00:00:00 /usr/lib/deja-dup/deja-dup-monitor
+geeth      2104   1120   2109  0    4 23:08 tty2     00:00:00 /usr/lib/deja-dup/deja-dup-monitor
+geeth      3685   1089   3685  0    5 23:17 ?        00:00:05 eog /home/geeth/Desktop/CO327/OS_project/Screenshot from 2018-12-03 22-32-36.png
+geeth      3685   1089   3688  0    5 23:17 ?        00:00:00 eog /home/geeth/Desktop/CO327/OS_project/Screenshot from 2018-12-03 22-32-36.png
+geeth      3685   1089   3689  0    5 23:17 ?        00:00:00 eog /home/geeth/Desktop/CO327/OS_project/Screenshot from 2018-12-03 22-32-36.png
+geeth      3685   1089   3690  0    5 23:17 ?        00:00:00 eog /home/geeth/Desktop/CO327/OS_project/Screenshot from 2018-12-03 22-32-36.png
+geeth      3685   1089   3691  0    5 23:17 ?        00:00:00 eog /home/geeth/Desktop/CO327/OS_project/Screenshot from 2018-12-03 22-32-36.png
+geeth      3709   1089   3709  0    8 23:19 ?        00:00:06 /snap/sublime-text/38/opt/sublime_text/sublime_text /home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.c
+geeth      3709   1089   3710  0    8 23:19 ?        00:00:00 /snap/sublime-text/38/opt/sublime_text/sublime_text /home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.c
+geeth      3709   1089   3712  0    8 23:19 ?        00:00:00 /snap/sublime-text/38/opt/sublime_text/sublime_text /home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.c
+geeth      3709   1089   3713  0    8 23:19 ?        00:00:00 /snap/sublime-text/38/opt/sublime_text/sublime_text /home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.c
+geeth      3709   1089   3714  0    8 23:19 ?        00:00:00 /snap/sublime-text/38/opt/sublime_text/sublime_text /home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.c
+geeth      3709   1089   3715  0    8 23:19 ?        00:00:00 /snap/sublime-text/38/opt/sublime_text/sublime_text /home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.c
+geeth      3709   1089   3721  0    8 23:19 ?        00:00:00 /snap/sublime-text/38/opt/sublime_text/sublime_text /home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.c
+geeth      3709   1089   3723  0    8 23:19 ?        00:00:00 /snap/sublime-text/38/opt/sublime_text/sublime_text /home/geeth/Desktop/CO327/OS_project/assignmentpart1/simple1.c
+geeth      3722   3709   3722  0    3 23:19 ?        00:00:00 /snap/sublime-text/38/opt/sublime_text/plugin_host 3709 --auto-shell-env
+geeth      3722   3709   3724  0    3 23:19 ?        00:00:00 /snap/sublime-text/38/opt/sublime_text/plugin_host 3709 --auto-shell-env
+geeth      3722   3709   3725  0    3 23:19 ?        00:00:00 /snap/sublime-text/38/opt/sublime_text/plugin_host 3709 --auto-shell-env
+geeth      3737   1089   3737  0    5 23:22 ?        00:00:05 evince /home/geeth/Desktop/CO327/OSC_9edition.pdf
+geeth      3737   1089   3739  0    5 23:22 ?        00:00:00 evince /home/geeth/Desktop/CO327/OSC_9edition.pdf
+geeth      3737   1089   3740  0    5 23:22 ?        00:00:00 evince /home/geeth/Desktop/CO327/OSC_9edition.pdf
+geeth      3737   1089   3747  0    5 23:22 ?        00:00:00 evince /home/geeth/Desktop/CO327/OSC_9edition.pdf
+geeth      3737   1089   3748  0    5 23:22 ?        00:00:01 evince /home/geeth/Desktop/CO327/OSC_9edition.pdf
+geeth      3743   1089   3743  0    3 23:22 ?        00:00:00 /usr/lib/evince/evinced
+geeth      3743   1089   3744  0    3 23:22 ?        00:00:00 /usr/lib/evince/evinced
+geeth      3743   1089   3745  0    3 23:22 ?        00:00:00 /usr/lib/evince/evinced
+geeth      3755   1089   3755  1    4 23:24 ?        00:00:05 /usr/lib/gnome-terminal/gnome-terminal-server
+geeth      3755   1089   3756  0    4 23:24 ?        00:00:00 /usr/lib/gnome-terminal/gnome-terminal-server
+geeth      3755   1089   3757  0    4 23:24 ?        00:00:00 /usr/lib/gnome-terminal/gnome-terminal-server
+geeth      3755   1089   3758  0    4 23:24 ?        00:00:00 /usr/lib/gnome-terminal/gnome-terminal-server
+geeth      3765   3755   3765  0    1 23:24 pts/0    00:00:00 bash
+geeth      4362   3765   4362  0    1 23:32 pts/0    00:00:00 ps -eLf

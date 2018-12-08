@@ -1,0 +1,153 @@
+import matplotlib
+import numpy as np
+import matplotlib.pyplot as plt
+
+def rand_walker():
+    matrix = np.array([0,1,2,3,4,5,6,7,8,9,10])
+    #print(matrix)
+    step = np.random.randint(0,2)
+    if step == 0:
+        num = matrix[0]
+    else:
+        num = matrix[10] 
+
+    Pos_v = [0 for i in range(500)]
+    for x in range (500):
+
+        step = np.random.randint(0,2)
+
+        if step==1:
+            num += 1
+        else:
+            num -= 1
+            
+        num = num%11
+
+        Pos_v[x] = matrix[num]
+    return Pos_v
+        
+Pos_v = rand_walker()
+Pos_v1 = rand_walker()
+Pos_v2 = rand_walker()
+
+fig = plt.figure(figsize=(15, 15))
+fig.subplots_adjust(hspace=.75)
+
+axes = plt.subplot(311)
+plt.plot(Pos_v, label='Random Walker')
+#axes.legend("Random Walker",loc="upper right")
+axes.set_title("Random Walker")
+axes.set_xlabel('Step')
+axes.set_ylabel('Current Position')
+
+handles, labels = axes.get_legend_handles_labels()
+fig.legend(handles, labels, loc='upper left')
+
+axes = plt.subplot(312)
+plt.hist(P, bins=20, color='r', label='Histogram')
+#axes.legend("Histogram",loc="upper right")
+axes.set_title("Histogram of Pos_v")
+axes.set_xlabel('Position')
+axes.set_ylabel('Iteration')
+
+handles, labels = axes.get_legend_handles_labels()
+fig.legend(handles, labels, loc='upper center')
+
+axes = plt.subplot(313)
+plt.scatter(Pos_v1 ,Pos_v2 , color='blue', alpha=0.3,edgecolors='grey', label='Scatter')
+#axes.legend("Scatter",loc="upper right")
+axes.set_title("Scatter plot of Pos_v1 vs Pos_v2")
+axes.set_xlabel('Pos_v1')
+axes.set_ylabel('Pos_v2')
+
+handles, labels = axes.get_legend_handles_labels()
+fig.legend(handles, labels, loc='upper right')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Exercises and TODOs
+'''
+
+================1.2.1. Matlab configuration and global setting========================
+
+
+
+#How to switch backends in matplotlib?
+
+There are 4 ways to switch backend in matplotlib.
+1. changing the backend parameter in 'matlabplotlibrc' file.
+e.g. backend : WXAgg   # use wxpython with antigrain (agg) rendering
+2. Setting the MPLBACKEND environment variable, either for current shell or for a single script
+e.g. 
+> export MPLBACKEND="module://my_backend"
+> python simple_plot.py
+
+> MPLBACKEND="module://my_backend" python simple_plot.py
+3. To set backend for a single script
+e.g. > python script.py -dbackend
+4. by using 'use()' function.
+e.g.
+import matplotlib
+matplotlib.use('PS')   # generate postscript output by default
+
+#Why do we need to change the backend of the matplotlib?
+
+Different users expect different output types when figure or graph is taken as the output. To support all these user cases maplotlib support of having alterable output capability which is called backend. For an example some users need to have a user interface backend which is a popping window with the particular figure. some users need to store the figure in a file. backend changing provide solution for such different requirements.
+
+======================1.2.2 Create a Figure========================
+
+fig.subplots adjust(hspace=.5) # TODO Is there any reason for setting this ?
+
+hspace is the amount of height reserved for space between subplots, expressed as a fraction of the average axis height
+
+'''
+
+import matplotlib
+import numpy as np
+import matplotlib.pyplot as plt
+fig = plt.figure(figsize=(10, 10))
+fig.subplots_adjust(hspace=.5)
+axes = plt.subplot(5,1,1)
+x = np.linspace(0, 10, 100)
+y = np.cos(x)
+axes.plot(x,y,linewidth=4.0, ls='--', color='r', marker=".")
+axes.legend("cos(x)",loc="upper right")
+axes.set_title("Title for (5,1) subplot")
+axes.set_xlabel('xlabel')
+axes.set_ylabel('ylabel')
+
+plt.show()
+plt.savefig('cosine.png', dpi=400, bbox_inches='tight')

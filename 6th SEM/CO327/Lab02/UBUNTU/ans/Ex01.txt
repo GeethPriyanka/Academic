@@ -1,0 +1,44 @@
+This is the answer for Exercise 1.1, Exercise 2.1 & also the testing file for the Exercise 1.2
+
+=============Exercise 1.1================
+
+a. When opening the file descriptor file status flags and file descriptors are set using oflags. By O_WRONLY, oflag value is changed to set the file descriptor status 'open for writing only'. If O_APPEND is set then offset of the file (which pointed to the current position of the file) will be set to the end of the file prior to each write. If the file exist O_CREAT flag has no effect. Otherwise file is created, the user ID of the file is set to the effective user ID of the process, the group ID of the file is set to the group ID of the file's parent directory or to the effective group ID of the process.
+
+b. S_IRUSR mode gives reading permission to the owner (user)
+S_IWUSR mode gives writing permission to the owner (user).
+
+=============Exercise 2.1================
+
+a. By "write(STDOUT_FILENO, &buff, count);" the content of the 'buff' is printed on the console. Here STDOUT_FILENO is a tag which informs that the 'buff' is a Standard output. Count is the size of the buffer.
+
+b. A single unnamed pipe cannot be used for bidirectional communication (Except for systems like SUN, IIRC).
+Reason behind this is, when parent or child process trying to write and read to/from a single pipe particular process may can end up reading what it intended to write to the other process and vice versa.  This happens because of synchronizing problem. But by using Named pipe this is possible.
+
+c. Unnamed pipes are created for a particular instances. Their writing and reading ends are also assigned relatively to the particular process. Therefore it can only perform communication between related process instances.
+
+
+=============Exercise 3.1================
+
+In order to perform the given task child process should be assigned to execute 'ls' command. When child process do that using 'exec()' all the communication links breaks as 'exec()' replaces all the original code of child process with new one. Therefore, given task is impossible.
+
+=============Exercise 3.2================
+
+a. 1 stands for Standard Output
+
+b.	i.	both dup() and dup2() makes a copy of file descriptors. But in dup() it uses the lowest numbered unused file descriptor to create the new file descriptor copy. On the other hand dup2() ask for two arguments, which the file descriptor to copy and destinated file descriptor. Therefore, in dup2() intead of using the lowest numbered file descriptor, it uses the user specified file descriptor. 
+Both functions are necessary. In most of the cases dup() creates new file descriptor successfully as the file decriptor number is assigned automatically. In dup2() as the user specifies the number of the descriptor, there may be failures in creating a new file descriptor. dup2() silently close, opened file descriptors  before reusing.
+
+
+=============Exercise 4.1================
+
+a. When the mkfifo() funcion is commented in reader ==> 
+When reader invokes first ==> Even when the writer is not executing reader prints a random value. This is the garbage value which stored in the buffer. 
+When writer invokes first ==> It prints the desired value. (message "Hi")
+
+When the mkfifo() funcion is commented in writer ==> 
+When reader invokes first ==> It prints the desired value. (message "Hi")
+When writer invokes first ==> nothing happens on the reader terminal. writer executes and end without any difference.
+
+This is because mkfifo() gives permission to access the fifo. Once the permission is given either by reader or writer then only the value can be accessed.
+
+Debugging in such a situation might be very hard as if the file fifo doesn't get permission until other end access it.

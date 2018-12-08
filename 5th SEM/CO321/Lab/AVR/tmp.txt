@@ -1,0 +1,12 @@
+
+Profiles on interface WiFi:
+
+Group policy profiles (read only)
+---------------------------------
+    <None>
+
+User profiles
+-------------
+    All User Profile     : My wire
+    All User Profile     : BYts-c2hlaGFuIE1Y
+

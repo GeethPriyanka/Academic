@@ -1,0 +1,175 @@
+
+E/14/403		
+
+#I tried these with jupyter.
+
+====================2.3.1 Try out========================
+
+import numpy as np
+matrix = np.array([np.arange(3), [i for i in range(3,6)], [6,7,8]])
+print(matrix)
+
+output : [[0 1 2]
+ [3 4 5]
+ [6 7 8]]
+
+
+ matrix[1,0]
+
+ output : 3
+
+
+ matrix[0] = 42
+
+ output : no output
+
+
+ matrix[1:3]
+
+ output : array([[3, 4, 5],
+       [6, 7, 8]]
+
+
+matrix[]
+
+output : File "<ipython-input-15-b4272bc5f62f>", line 1
+    matrix[]
+           ^
+SyntaxError: invalid syntax
+
+
+matrix[1:]
+
+output : array([[3, 4, 5],
+       [6, 7, 8]])
+
+
+matrix[1:100]
+
+output : array([[3, 4, 5],
+       [6, 7, 8]])
+
+
+matrix[:]
+
+output : array([[42, 42, 42],
+       [ 3,  4,  5],
+       [ 6,  7,  8]])
+       #This output is because commands were executed sequentially
+
+
+matrix[1:,:2]
+
+output : array([[3, 4],
+       [6, 7]])
+
+
+matrix[:2, 1:]
+
+output : array([[42, 42],
+       [ 4,  5]])		#This output is because commands were executed sequentially
+
+
+matrix.ravel()
+
+output : array([42, 42, 42,  3,  4,  5,  6,  7,  8]) #This output is because commands were executed sequentially
+
+
+matrix[:,1].copy()
+
+output : array([42,  4,  7])		#This output is because commands were executed sequentially
+
+
+matrix[1].tolist()
+
+output : [3, 4, 5]
+
+
+matrix.reshape(-1)
+
+output : array([42, 42, 42,  3,  4,  5,  6,  7,  8])
+
+
+================2.4.1 try out======================
+
+import numpy as np
+matrix = np.array([np.arange(3), [i for i in range(3,6)], [6,7,8]])
+print(matrix)
+
+output : [[0 1 2]
+ [3 4 5]
+ [6 7 8]]
+
+
+ np.sqrt(matrix)
+
+output :  array([[6.4807407 , 6.4807407 , 6.4807407 ],
+       [1.73205081, 2.        , 2.23606798],
+       [2.44948974, 2.64575131, 2.82842712]])
+
+
+np.exp(matrix)
+
+output : array([[1.00000000e+00, 2.71828183e+00, 7.38905610e+00],
+       [2.00855369e+01, 5.45981500e+01, 1.48413159e+02],
+       [4.03428793e+02, 1.09663316e+03, 2.98095799e+03]])
+
+
+np.min(np.maximum(np.random.randn(6), np.random.randn(6)))
+
+output : -0.04291893138663438
+
+
+np.mean(matrix)
+
+output : 4.0
+
+
+np.mean(matrix , axis=0)
+
+output : array([3., 4., 5.])
+
+
+np.sum(matrix)
+
+output : 36
+
+
+np.invert(matrix)
+
+output : array([[-1, -2, -3],
+       			[-4, -5, -6],
+       			[-7, -8, -9]], dtype=int32)
+
+
+np.random.randint(0,1)
+
+output : 0
+
+
+
+============Single random walk with 500 steps================
+
+import numpy as np
+matrix = np.array([0,1,2,3,4,5,6,7,8,9,10])
+print(matrix)
+step = np.random.randint(0,2)
+if step == 0:
+    num = matrix[0]
+else:
+    num = matrix[10] 
+
+for x in range (500):
+         
+    step = np.random.randint(0,2)
+
+    if step==1:
+        num += 1
+    else:
+        num -= 1
+    num = num%11
+    print("Iteration number :",x,"  Walking point :",matrix[num])
+
+
+
+

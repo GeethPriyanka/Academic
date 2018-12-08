@@ -1,0 +1,5 @@
+1.	Java InputStream, OutputStream classes provided by java.io package are used once the connection is established between the source and the destination. But in here datagram communication is used and as it is connectionless protocol oriented, so it can’t use above stream classes.
+2.	  
+3.	  
+4.	No, nothing unusual happened
+5.	No packet losses during the datagram exchanging, data processing time for below layers is uncountable, 

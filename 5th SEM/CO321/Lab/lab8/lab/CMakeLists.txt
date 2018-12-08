@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.9)
+PROJECT(lab2)
+SET(CMAKE_SYSTEM_NAME Generic)
+SET(MCU "atmega328p")
+SET(PORT "com6")
+SET(F_CPU "16000000UL")
+# For some reason, these paths have to be absolute, otherwise
+# CLion won't be able to find headers etc.
+SET(CMAKE_C_COMPILER avr-gcc)
+
+SET(CMAKE_C_FLAGS "-mmcu=${MCU} -DF_CPU=${F_CPU} -Os")
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
+
+SET(SOURCE_FILES
+
+        ex2.c
+
+        )
+ADD_EXECUTABLE(${PROJECT_NAME} ${SOURCE_FILES})
+ADD_CUSTOM_COMMAND(TARGET ${PROJECT_NAME} POST_BUILD COMMAND avr-objcopy -O ihex -R.eeprom ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME}.hex)
+ADD_CUSTOM_COMMAND(TARGET ${PROJECT_NAME} WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/bin POST_BUILD COMMAND avrdude -F -V -c arduino -p ATMEGA328P -P ${PORT} -b 115200 -U flash:w:${PROJECT_NAME}.hex)

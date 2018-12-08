@@ -1,0 +1,98 @@
+(1)
+mysql> create table Student(
+    -> Name varchar(25) not null,
+    -> Reg_no integer not null,
+    -> GPA float,
+    -> Con_Reg integer,
+    -> Class varchar(50),
+    -> Primary key(Reg_no));
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> insert into Student(Name,Reg_no,GPA) values
+    -> ('Sameera',425,3.25),
+    -> ('Kasun',210,3.40),
+    -> ('Kalpa',201,3.10),
+    -> ('Chathura',312,3.85),
+    -> ('Lakmali',473,3.75),
+    -> ('Sidath',352,3.30),
+    -> ('Kumudu',111,3.70),
+    -> ('Nalin',456,3.05),
+    -> ('Rohani',324,3.70),
+    -> ('Chithra',231,3.30);
+Query OK, 10 rows affected (0.03 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select * from Student;
++----------+--------+------+---------+-------+
+| Name     | Reg_no | GPA  | Con_Reg | Class |
++----------+--------+------+---------+-------+
+| Sameera  |    425 | 3.25 |    NULL | NULL  |
+| Kasun    |    210 |  3.4 |    NULL | NULL  |
+| Kalpa    |    201 |  3.1 |    NULL | NULL  |
+| Chathura |    312 | 3.85 |    NULL | NULL  |
+| Lakmali  |    473 | 3.75 |    NULL | NULL  |
+| Sidath   |    352 |  3.3 |    NULL | NULL  |
+| Kumudu   |    111 |  3.7 |    NULL | NULL  |
+| Nalin    |    456 | 3.05 |    NULL | NULL  |
+| Rohani   |    324 |  3.7 |    NULL | NULL  |
+| Chithra  |    231 |  3.3 |    NULL | NULL  |
++----------+--------+------+---------+-------+
+10 rows in set (0.00 sec)
+
+(2)
+
+mysql> create table Convocation(
+    -> Lname varchar(25),
+    -> Address varchar(50),
+    -> Age integer,
+    -> Reg_no integer,
+    -> Con_reg integer not null,
+    -> Primary key(Reg_no,Con_reg));
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> Alter table Convocation add foreign key(Reg_no) references Student(Reg_no)
+    -> on update cascade on delete restrict;
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> describe Convocation;
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| Lname   | varchar(25) | YES  |     | NULL    |       |
+| Address | varchar(50) | YES  |     | NULL    |       |
+| Age     | int(11)     | YES  |     | NULL    |       |
+| Reg_no  | int(11)     | NO   | PRI | NULL    |       |
+| Con_reg | int(11)     | NO   | PRI | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+(3)
+
+mysql> delimiter //
+
+mysql> create trigger updateConReg
+    -> after insert on Convocation
+    -> for each row
+    -> begin
+    -> if new.Con_reg is not null then
+    -> update Student
+    -> set Con_reg = new.Con_reg
+    -> where Con_reg = new.Con_reg;
+    -> end if;
+    -> end//
+Query OK, 0 rows affected (0.37 sec)
+
+mysql> create procedure storeConReg(IN Rno int, IN CRno int, IN age int, IN address varchar(50), IN name varchar(25))
+    -> begin
+    -> insert into Convocation(Lname,Address,Age,Reg_no,Con_reg) values
+    -> (name,address,age,Rno,CRno);
+    -> end//
+Query OK, 0 rows affected (0.00 sec)
+
+delimiter ;
+
+(4)
+
+
+

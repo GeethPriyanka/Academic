@@ -1,0 +1,18 @@
+﻿commands on cmd to run:
+
+javac HashTableMain.java
+java HashTableMain [Number of Buckets] [Hash code number] [File name]
+
+Ex:
+javac HashTableMain.java
+java HashTableMain 10 2 sample-text1.txt
+
+here number of buckets is 10
+hash code number is 2
+file name is sample-text1.txt
+
+----Constraints----
+
+[Number of Buckets]	:	0<integers	
+[Hash code number]	:	1 or 2
+[File name]		:	sample-text1.txt or sample-text2.txt

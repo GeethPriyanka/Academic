@@ -1,0 +1,295 @@
+(1)
+mysql> create database e14403lab06;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use e14403lab06;
+Database changed
+
+mysql> create table Student(
+    -> Name varchar(25),
+    -> RegNo integer,
+    -> GPA float,
+    -> ConRegNo integer,
+    -> Class varchar(50),
+    -> Primary key(RegNo));
+Query OK, 0 rows affected (0.34 sec)
+
+mysql> insert into Student(Name,RegNo,GPA) values
+    -> ('Sameera',425,3.25),
+    -> ('Kasun',210,3.40),
+    -> ('Kalpa',201,3.10),
+    -> ('Chathura',312,3.85),
+    -> ('Lakmali',473,3.75),
+    -> ('Sidath',352,3.30),
+    -> ('Kumudu',111,3.70),
+    -> ('Nalin',456,3.05),
+    -> ('Rohani',324,3.70),
+    -> ('Chithra',231,3.30);
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select * from Student;
++----------+-------+------+----------+-------+
+| Name     | RegNo | GPA  | ConRegNo | Class |
++----------+-------+------+----------+-------+
+| Sameera  |   425 | 3.25 |     NULL | NULL  |
+| Kasun    |   210 |  3.4 |     NULL | NULL  |
+| Kalpa    |   201 |  3.1 |     NULL | NULL  |
+| Chathura |   312 | 3.85 |     NULL | NULL  |
+| Lakmali  |   473 | 3.75 |     NULL | NULL  |
+| Sidath   |   352 |  3.3 |     NULL | NULL  |
+| Kumudu   |   111 |  3.7 |     NULL | NULL  |
+| Nalin    |   456 | 3.05 |     NULL | NULL  |
+| Rohani   |   324 |  3.7 |     NULL | NULL  |
+| Chithra  |   231 |  3.3 |     NULL | NULL  |
++----------+-------+------+----------+-------+
+10 rows in set (0.00 sec)
+
+(2)
+
+mysql> create table Convocation(
+    -> Lname varchar(25),
+    -> Address varchar(50),
+    -> Age integer,
+    -> Reg_no integer,
+    -> Con_Reg_No integer,
+    -> primary key(Con_Reg_No));
+Query OK, 0 rows affected (0.33 sec)
+
+mysql> Alter table Convocation add foreign key(Reg_No) references Student(RegNo)
+    -> on update cascade on delete restrict;
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+(3)
+
+mysql> create trigger trigStudent
+    -> after insert on Convocation
+    -> for each row
+    -> begin
+    -> if new.Reg_No is not null then
+    -> update Student
+    -> set ConRegNo = new.Con_Reg_No
+    -> where RegNo = new.Reg_No;
+    -> end if;
+    -> end//
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> create procedure store_con(IN Reg_no int,IN Con_Reg_No int,IN age int,IN address varchar(50),IN LName varchar(25))
+    -> begin
+    -> insert into Convocation(Lname,Address,Age,Reg_no,Con_Reg_No) values
+    -> (Lname,address,age,Reg_no,Con_Reg_No);
+    -> end//
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> delimiter ;
+
+(4)
+
+mysql> call store_con(425,1,24,'23,Gampola','Sameera');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call store_con(312,2,25,'56,Kandy','Chathura');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call store_con(473,3,26,'54,Badulla','Lakmali');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call store_con(352,4,26,'54,Wellawatta','Sidath');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call store_con(456,5,23,'65,Gampaha','Nalin');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from convocation;
++----------+---------------+------+--------+------------+
+| Lname    | Address       | Age  | Reg_no | Con_Reg_No |
++----------+---------------+------+--------+------------+
+| Sameera  | 23,Gampola    |   24 |    425 |          1 |
+| Chathura | 56,Kandy      |   25 |    312 |          2 |
+| Lakmali  | 54,Badulla    |   26 |    473 |          3 |
+| Sidath   | 54,Wellawatta |   26 |    352 |          4 |
+| Nalin    | 65,Gampaha    |   23 |    456 |          5 |
++----------+---------------+------+--------+------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from Student;
++----------+-------+------+----------+-------+
+| Name     | RegNo | GPA  | ConRegNo | Class |
++----------+-------+------+----------+-------+
+| Sameera  |   425 | 3.25 |        1 | NULL  |
+| Kasun    |   210 |  3.4 |     NULL | NULL  |
+| Kalpa    |   201 |  3.1 |     NULL | NULL  |
+| Chathura |   312 | 3.85 |        2 | NULL  |
+| Lakmali  |   473 | 3.75 |        3 | NULL  |
+| Sidath   |   352 |  3.3 |        4 | NULL  |
+| Kumudu   |   111 |  3.7 |     NULL | NULL  |
+| Nalin    |   456 | 3.05 |        5 | NULL  |
+| Rohani   |   324 |  3.7 |     NULL | NULL  |
+| Chithra  |   231 |  3.3 |     NULL | NULL  |
++----------+-------+------+----------+-------+
+10 rows in set (0.00 sec)
+
+(5)
+
+mysql> create view Registered as
+    -> select
+    -> Student.Name, Student.RegNo,Student.GPA,Convocation.Con_Reg_No, Convocation.Address,Convocation.Age
+    -> from Student,Convocation
+    -> where Student.RegNo = Convocation.Reg_No &&
+    -> Convocation.Con_Reg_No is not null
+    -> group by Student.RegNo;
+Query OK, 0 rows affected (0.08 sec)
+
+select * from Registered;
+
++----------+---------+------+--------------------+---------------+------+
+| Name     | Reg_Num | GPA  | ConvocationReg_Num | Address       | age  |
++----------+---------+------+--------------------+---------------+------+
+| Chathura |     312 | 3.85 |                  2 | 56,Kandy    	 |   25 |
+| Sidath   |     352 |  3.3 |                  4 | 54,Wellawatta |   26 |
+| Sameera  |     425 | 3.25 |                  1 | 23,Gampola    |   24 |
+| Nalin    |     456 | 3.05 |                  5 | 65,Gampaha    |   23 |
+| Lakmali  |     473 | 3.75 |                  3 | 54,Badulla 	 |   26 |
++----------+---------+------+--------------------+---------------+------+
+5 rows in set (0.00 sec)
+
+(6)
+
+mysql> create view NotRegistered as
+    -> select Name, RegNo, GPA, null as Address, null as Age
+    -> from Student
+    -> where ConRegNo is null;
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> select * from NotRegistered;
++---------+-------+------+---------+------+
+| Name    | RegNo | GPA  | Address | Age  |
++---------+-------+------+---------+------+
+| Kasun   |   210 |  3.4 |    NULL | NULL |
+| Kalpa   |   201 |  3.1 |    NULL | NULL |
+| Kumudu  |   111 |  3.7 |    NULL | NULL |
+| Rohani  |   324 |  3.7 |    NULL | NULL |
+| Chithra |   231 |  3.3 |    NULL | NULL |
++---------+-------+------+---------+------+
+5 rows in set (0.00 sec)
+
+(7)
+
+mysql> create table LateRegistration(
+    -> Lname varchar(25),
+    -> Address varchar(50),
+    -> Age integer,
+    -> Reg_No integer,
+    -> Con_Reg_No integer,
+    -> Primary key(Con_reg_No));
+Query OK, 0 rows affected (0.06 sec)
+
+(8)
+
+mysql> delimiter //
+mysql> create trigger LateRegistration
+    -> before insert on Convocation
+    -> for each row
+    -> begin
+    -> insert into LateRegistration(Lname,Address,Age,Reg_No,Con_Reg_No) values
+    -> (new.Lname,new.Address,new.Age,new.Reg_No,new.Con_Reg_No);
+    -> end//
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> delimiter ;
+
+(9)
+
+mysql> insert into convocation values('Kasun','65,Katugasthota',23,210,6);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into convocation values('Kalpa','75,Katukurunda',24,201,7);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into convocation values('Kumudu','54,Penideniya',26,111,8);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into convocation values('Rohani','4,Peradeniya',25,324,9);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into convocation values('Chithra','44,Menikhinna',25,231,10);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from LateRegistration;
++---------+-----------------+------+--------+------------+
+| Lname   | Address         | Age  | Reg_No | Con_Reg_No |
++---------+-----------------+------+--------+------------+
+| Kasun   | 65,Katugasthota |   23 |    210 |          6 |
+| Kalpa   | 75,Katukurunda  |   24 |    201 |          7 |
+| Kumudu  | 54,Penideniya   |   26 |    111 |          8 |
+| Rohani  | 4,Peradeniya    |   25 |    324 |          9 |
+| Chithra | 44,Menikhinna   |   25 |    231 |         10 |
++---------+-----------------+------+--------+------------+
+5 rows in set (0.01 sec)
+
+(10)
+
+mysql> delimiter //
+mysql> create procedure class(IN GPA float, IN RegNo int)
+    -> begin
+    -> if GPA >=3.7 then update Student set Class='First class honors' where RegNo = RegNo\c
+mysql> create procedure class(IN GPA float, IN RegNum int)
+    -> begin
+    -> if GPA >=3.7 then update Student set Class='First class honors' where RegNo = RegNum;
+    -> elseif GPA <3.7 and GPA >=3.3 then update Student set class='Second class honors-upper division' where RegNo = RegNum;
+    -> elseif GPA < 3.3 and GPA >= 2.7 then update Student set Class='Second class honors-lower division' where RegNo = RegNum;
+    -> elseif GPA < 2.7 and GPA >= 2.0 then update Student set Class='Third class honors' where RegNo = RegNum;
+    -> end if;
+    -> end //
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> delimiter ;
+
+mysql> call Class(3.25,425);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call Class(3.40,210);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call Class(3.10,201);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call Class(3.85,312);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call Class(3.75,473);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call Class(3.30,352);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call Class(3.70,111);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call Class(3.05,456);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call Class(3.70,324);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> call Class(3.30,231);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Student;
++----------+-------+------+----------+------------------------------------+
+| Name     | RegNo | GPA  | ConRegNo | Class                              |
++----------+-------+------+----------+------------------------------------+
+| Sameera  |   425 | 3.25 |        1 | Second class honors-lower division |
+| Kasun    |   210 |  3.4 |        6 | Second class honors-upper division |
+| Kalpa    |   201 |  3.1 |        7 | Second class honors-lower division |
+| Chathura |   312 | 3.85 |        2 | First class honors                 |
+| Lakmali  |   473 | 3.75 |        3 | First class honors                 |
+| Sidath   |   352 |  3.3 |        4 | Second class honors-lower division |
+| Kumudu   |   111 |  3.7 |        8 | First class honors                 |
+| Nalin    |   456 | 3.05 |        5 | Second class honors-lower division |
+| Rohani   |   324 |  3.7 |        9 | First class honors                 |
+| Chithra  |   231 |  3.3 |       10 | Second class honors-lower division |
++----------+-------+------+----------+------------------------------------+
+10 rows in set (0.00 sec)
+

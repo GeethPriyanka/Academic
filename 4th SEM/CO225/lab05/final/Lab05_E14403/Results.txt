@@ -1,0 +1,379 @@
+OBSERVATIONS
+
+-----------------Test case 01---------------------
+Test1
+
+Number of rows in Matrix A :    3
+Number of columns in Matrix A : 4
+Number of rows in Matrix B :    4
+Number of columns in Matrix B : 3
+Number of threads used :        1
+Time spent for calculation :    0ms
+
+Test1
+
+Number of rows in Matrix A :    3
+Number of columns in Matrix A : 4
+Number of rows in Matrix B :    4
+Number of columns in Matrix B : 3
+Number of threads used :        3
+Time spent for calculation :    0ms
+
+-----------------Test case 02---------------------
+Test2
+
+Number of rows in Matrix A :    3
+Number of columns in Matrix A : 4
+Number of rows in Matrix B :    4
+Number of columns in Matrix B : 3
+Number of threads used :        1
+Time spent for calculation :    3ms
+
+
+Test2
+
+Number of rows in Matrix A :    3
+Number of columns in Matrix A : 4
+Number of rows in Matrix B :    4
+Number of columns in Matrix B : 3
+Number of threads used :        3
+Time spent for calculation :    3ms
+
+-----------------Test case 03---------------------
+
+Test3
+
+Number of rows in Matrix A :    3
+Number of columns in Matrix A : 4
+Number of rows in Matrix B :    4
+Number of columns in Matrix B : 3
+Number of threads used :        1
+Time spent for calculation :    4ms
+
+
+Test3
+
+Number of rows in Matrix A :    3
+Number of columns in Matrix A : 4
+Number of rows in Matrix B :    4
+Number of columns in Matrix B : 3
+Number of threads used :        3
+Time spent for calculation :    4ms
+
+
+-----------------Test case 04---------------------
+Test4
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        1
+Time spent for calculation :    12ms
+
+Test4
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        2
+Time spent for calculation :    10ms
+
+Test4
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        15
+Time spent for calculation :    13ms
+
+
+Test4
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        30
+Time spent for calculation :    16ms
+
+-----------------Test case 05---------------------
+Test5
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        1
+Time spent for calculation :    0ms
+
+Test5
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        2
+Time spent for calculation :    0ms
+
+Test5
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        15
+Time spent for calculation :    0ms
+
+Test5
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        30
+Time spent for calculation :    19ms
+
+-----------------Test case 06---------------------
+Test6
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        1
+Time spent for calculation :    16ms
+
+
+Test6
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        2
+Time spent for calculation :    29ms
+
+Test6
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        15
+Time spent for calculation :    33ms
+
+Test6
+
+Number of rows in Matrix A :    30
+Number of columns in Matrix A : 40
+Number of rows in Matrix B :    40
+Number of columns in Matrix B : 30
+Number of threads used :        30
+Time spent for calculation :    36ms
+
+-----------------Test case 07---------------------
+Test7
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        1
+Time spent for calculation :    411ms
+
+Test7
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        2
+Time spent for calculation :    220ms
+
+Test7
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        30
+Time spent for calculation :    253ms
+
+Test7
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        150
+Time spent for calculation :    269ms
+
+Test7
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        300
+Time spent for calculation :    685ms
+
+-----------------Test case 08---------------------
+Test8
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        1
+Time spent for calculation :    369ms
+
+Test8
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        2
+Time spent for calculation :    257ms
+
+Test8
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        30
+Time spent for calculation :    254ms
+
+Test8
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        150
+Time spent for calculation :    958ms
+
+Test8
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        300
+Time spent for calculation :    833ms
+
+-----------------Test case 09---------------------
+Test9
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        1
+Time spent for calculation :    402ms
+
+Test9
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        2
+Time spent for calculation :    396ms
+
+Test9
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        30
+Time spent for calculation :    379ms
+
+
+Test9
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        150
+Time spent for calculation :    752ms
+
+
+Test9
+
+Number of rows in Matrix A :    300
+Number of columns in Matrix A : 400
+Number of rows in Matrix B :    400
+Number of columns in Matrix B : 300
+Number of threads used :        300
+Time spent for calculation :    915ms
+
+-----------------Test case 10---------------------
+Test10
+
+Number of rows in Matrix A :    1000
+Number of columns in Matrix A : 2000
+Number of rows in Matrix B :    2000
+Number of columns in Matrix B : 1000
+Number of threads used :        1
+Time spent for calculation :    16550ms
+
+Test10
+
+Number of rows in Matrix A :    1000
+Number of columns in Matrix A : 2000
+Number of rows in Matrix B :    2000
+Number of columns in Matrix B : 1000
+Number of threads used :        2
+Time spent for calculation :    12927ms
+
+
+Test10
+
+Number of rows in Matrix A :    1000
+Number of columns in Matrix A : 2000
+Number of rows in Matrix B :    2000
+Number of columns in Matrix B : 1000
+Number of threads used :        10
+Time spent for calculation :    12646ms
+
+Test10
+
+Number of rows in Matrix A :    1000
+Number of columns in Matrix A : 2000
+Number of rows in Matrix B :    2000
+Number of columns in Matrix B : 1000
+Number of threads used :        100
+Time spent for calculation :    12547ms
+
+
+Test10
+
+Number of rows in Matrix A :    1000
+Number of columns in Matrix A : 2000
+Number of rows in Matrix B :    2000
+Number of columns in Matrix B : 1000
+Number of threads used :        500
+Time spent for calculation :    12514ms
+
+Test10
+
+Number of rows in Matrix A :    1000
+Number of columns in Matrix A : 2000
+Number of rows in Matrix B :    2000
+Number of columns in Matrix B : 1000
+Number of threads used :        1000
+Time spent for calculation :    12602ms
+
+
+
+CONCLUSION
+
+According to the Observations calculation time is minimum for integer type data and maximum for double type data. 
+Effect of using threads can be observed clearly when the number of calculations are increased, because if the thread organizing time is greater than the calculation time then using threads might cause for an delay. Therefore, using threads is not going to make the program faster everytime. If the calculations and processes that have to be done in the program are greater, then threads can perform a great role to make the program faster. Number of threads that is going to make the most efficient calculation also depends on the program. However, in this case if the number of threads are equal to the number of rows then the performance is less.

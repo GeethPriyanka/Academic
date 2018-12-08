@@ -1,0 +1,35 @@
+
+
+================1.2.1. Matlab configuration and global setting========================
+
+
+
+#How to switch backends in matplotlib?
+
+There are 4 ways to switch backend in matplotlib.
+1. changing the backend parameter in 'matlabplotlibrc' file.
+e.g. backend : WXAgg   # use wxpython with antigrain (agg) rendering
+2. Setting the MPLBACKEND environment variable, either for current shell or for a single script
+e.g. 
+> export MPLBACKEND="module://my_backend"
+> python simple_plot.py
+
+> MPLBACKEND="module://my_backend" python simple_plot.py
+3. To set backend for a single script
+e.g. > python script.py -dbackend
+4. by using 'use()' function.
+e.g.
+import matplotlib
+matplotlib.use('PS')   # generate postscript output by default
+
+#Why do we need to change the backend of the matplotlib?
+
+Different users expect different output types when figure or graph is taken as the output. To support all these user cases maplotlib support of having alterable output capability which is called backend. For an example some users need to have a user interface backend which is a popping window with the particular figure. some users need to store the figure in a file. backend changing provide solution for such different requirements.
+
+======================1.2.2 Create a Figure========================
+
+fig.subplots adjust(hspace=.5) # TODO Is there any reason for setting this ?
+
+hspace is the amount of height reserved for space between subplots, expressed as a fraction of the average axis height
+
+

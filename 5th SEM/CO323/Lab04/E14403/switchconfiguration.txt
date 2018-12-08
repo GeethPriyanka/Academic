@@ -1,0 +1,57 @@
+
+Switch>
+Switch>enable
+Switch#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#interface fastEthernet 0/3
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 2
+% Access VLAN does not exist. Creating vlan 2
+Switch(config-if)#interface fastEthernet 0/4
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 3
+% Access VLAN does not exist. Creating vlan 3
+Switch(config-if)#interface fastEthernet 0/5
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 4
+% Access VLAN does not exist. Creating vlan 4
+Switch(config-if)#interface fastEthernet 0/6
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 3
+Switch(config-if)#interface fastEthernet 0/7
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 2
+Switch(config-if)#interface fastEthernet 0/8
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 4
+Switch(config-if)#exit
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Switch#
+
+Switch>
+Switch>enable
+Switch#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#interface fastEthernet 0/2
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 2
+Switch(config-if)#interface fastEthernet 0/1
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan 3
+Switch(config-if)#exit
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Switch#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Switch#

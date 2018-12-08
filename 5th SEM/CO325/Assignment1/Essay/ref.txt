@@ -1,0 +1,27 @@
+https://www.darkreading.com/risk/the-evolution-of-malware/a/d-id/1322461		2:36 PM 6/18/2018
+https://en.wikipedia.org/wiki/Web_threat						3:03 PM 6/18/2018
+https://www.cloudbric.com/blog/2014/11/types-of-web-threats/				3:03 PM 6/18/2018
+http://www.cybercrimejournal.com/HietanenbookreviewJuly2009.pdf				3:05 PM 6/18/2018
+https://www.forbes.com/sites/eladnatanson/2018/06/11/mobile-ad-fraud-in-2018-tackling-the-newest-threats/2/#14c241a1204d
+https://insights.samsung.com/2018/02/14/mobile-security-threats-what-to-watch-for-in-2018/
+https://www.chathamhouse.org/expert/comment/internet-things-will-be-even-more-vulnerable-cyber-attacks
+https://www.csoonline.com/article/2867407/network-security/shodan-exposes-iot-vulnerabilities.html
+https://www.cso.com.au/article/575407/internet-things-iot-threats-countermeasures/
+https://www.forbes.com/sites/eladnatanson/2018/06/11/mobile-ad-fraud-in-2018-tackling-the-newest-threats/#5d568d4250f5
+https://www.businesswire.com/news/home/20171011005771/en/Dark-Web-Ransomware-Economy-Growing-Annual-Rate
+https://securelink.net/resources/trending/will-coin-mining-replace-ransomware/
+https://whatis.techtarget.com/definition/vulnerability-and-patch-management
+https://resources.infosecinstitute.com/category/certifications-training/cissp/domains/security-operations/vulnerability-and-patch-management/#gref
+https://www.pcworld.com/article/144636/guide_patch_vulnerability_management.html
+https://www.cylab.cmu.edu/_files/pdfs/news/cybersecurityinthethreetimes.pdf
+https://us.norton.com/internetsecurity-mobile-types-of-common-mobile-threats-and-what-they-can-do-to-your-phone.html
+https://definitions.uslegal.com/i/internet-security/			7:08 PM 6/14/2018
+https://www.rapid7.com/fundamentals/types-of-attacks/			11:03 AM 6/16/2018
+https://en.wikipedia.org/wiki/Malware					10:52 AM 6/18/2018
+https://en.wikipedia.org/wiki/Phishing					11:22 AM 6/18/2018
+https://www.acunetix.com/websitesecurity/sql-injection/			11:36 AM 6/18/2018
+https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)		11:37 AM 6/18/2018
+https://www.techopedia.com/definition/24841/denial-of-service-attack-dos	12:10 PM 6/18/2018
+https://www.owasp.org/index.php/Session_hijacking_attack		12:22 PM 6/18/2018
+https://en.wikipedia.org/wiki/Credential_stuffing			12:29 PM 6/18/2018
+http://www.information-age.com/future-cybercrime-123458380/		12:39 PM 6/18/2018

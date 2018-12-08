@@ -1,0 +1,48 @@
+EX 2
+
+ii)	when we run the given code, it runs and dies within miliseconds. Therefore any information about the process is hard to gain. To avoid the particular situation code must be modified as follows.
+#include<stdio.h>
+int main(void)
+{
+	int i;
+	for(i=0;i<3;i++)
+	fork();
+	while (1);
+
+	return 0;
+}
+
+after running this code enter command ps -afx to visualize the processes.
+
+
+
+EX 3
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/types.h>
+#include<sys/wait.h>
+
+
+int main(void){
+
+	int pid;
+	pid  =  fork();
+	wait(NULL);			//wait is put here
+	if(pid  <  0){
+		perror("fork");
+		exit(1);
+	}
+	if(pid  ==  0)
+		puts("This  is the  child  process");
+	else
+		puts("This  is the  parent  process");
+	return 0;
+}
+
+
+EX 4
+
+1.	message “Program ls has terminated” didn't appear at any moment.
+
+2.	

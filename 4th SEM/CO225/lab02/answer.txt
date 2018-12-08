@@ -1,0 +1,11 @@
+﻿1)If the adding element is already exist in the set comparison is done until the same element meets. If not, N number of comparison is going to happen.  
+
+2) to remove an element only one operation is need. if the set is empty then it may return null. there is also only one operation. therefore, it is not changing with the numer of elements in the set.
+ 
+3)Yes / if the items are kept sorted then the repeated values can be identified without iterating though the whole set. this would make the program faster when there are same elements in the set.
+ 
+
+4)option 1 is better as it initially check for the emptyness. if not it will check for whole   !isEmpty condition and 
+ 
+
+5)Yes, we can use Java annotation to get rid of –Xlint flags.

@@ -1,0 +1,8 @@
+This is the answer for Exercise 1.1 & also the testing file for the Exercise 1.2
+
+a. When opening the file descriptor file status flags and file descriptors are set using oflags. By O_WRONLY, oflag value is changed to set the file descriptor status 'open for writing only'. If O_APPEND is set then offset of the file (which pointed to the current position of the file) will be set to the end of the file prior to each write. If the file exist O_CREAT flag has no effect. Otherwise file is created, the user ID of the file is set to the effective user ID of the process, the group ID of the file is set to the group ID of the file's parent directory or to the effective group ID of the process.
+
+b. S_IRUSR mode gives reading permission to the owner (user)
+S_IWUSR mode gives writing permission to the owner (user).
+
+this is testing 123

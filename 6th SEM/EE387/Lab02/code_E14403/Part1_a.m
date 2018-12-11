@@ -1,7 +1,6 @@
 clear all;
 close all;
 
-
 subplot(2,2,1)
 X = 0:1:20;
 B = -1.2;

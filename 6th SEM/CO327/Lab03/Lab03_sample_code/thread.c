@@ -9,7 +9,7 @@ void *thread_function(void *arg)
 	for(a=0;a<10; a++)
 	{
 	printf("Thread says hi!\n");
-	sleep(1);
+	sleep(2);
 	}
 	return NULL;
 }

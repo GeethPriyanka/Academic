@@ -9,7 +9,7 @@ void *thread_function(void *arg)
         for(a = 1; a <= 3; a++)
         {
                 printf("Thread %d:%d says hi!\n", *(int *)arg, a);
-//              sleep(1);
+              sleep(1);
         }
 
         (*(int *)arg)++;
@@ -27,14 +27,14 @@ int main(void)
                         printf("error creating thread.");
                         abort();
                 }
-                if ( pthread_join ( mythread, NULL ) )
+                /*if ( pthread_join ( mythread, NULL ) )
                 {
                         printf("error joining thread.");
                         abort();
-                }
-//              sleep(1);
+                }*/
+              sleep(1);
         }
-//      sleep(5);
+      sleep(1);
         printf("Main thread says hi!\n");
         exit(0);
 }

@@ -1,0 +1,219 @@
+/*
+E/14/403
+Wimalasiri KPGP
+CO327 - lab03
+please open this text file with sublime or proper text editor.
+*/
+Exercise 1
+
+1.	a)	Why do you need '- pthread ' flag when you compile?
+		when compiling terminal shows that reference to the 'pthread_create' and 'pthread_join' methods are undefined. To indicate that pthread methods are used inside the code we need to put '-pthread' explicitly when compiling, to refer the pthread library.
+
+Exercise 2
+
+1.	a)	7 new processes created.
+
+	b)	5 threads will be created. In part a) all forked processes are affected with the following forks and they were running in parallel. But here, each thread is created, executed and then new thread is created for the following tasks. Therefore thread creation is a sequential task.
+
+
+Exercise 3
+
+1.	a)	OUTPUT:
+	Thread 1:1 says hi!
+	Thread 1:2 says hi!
+	Thread 1:3 says hi!
+	Thread 2:1 says hi!
+	Thread 2:2 says hi!
+	Thread 2:3 says hi!
+	Thread 3:1 says hi!
+	Thread 3:2 says hi!
+	Thread 3:3 says hi!
+	Thread 4:1 says hi!
+	Thread 4:2 says hi!
+	Thread 4:3 says hi!
+	Thread 5:1 says hi!
+	Thread 5:2 says hi!
+	Thread 5:3 says hi!
+	Main thread says hi!
+	
+	First threads are created in the main, and thread is given the count =1; (via pthread_create method) within the thread function count value is updated for next threads. Each thread prints a message 3 times in a for loop. After a particular thread's task then new thread is created and it performs its task. As there is a pthread_join method main thread wait untill all threads finishes. Finally main method is executed.
+
+	b)	Incrementing the count variable given into the 'pthread_create' function before creating the next thread.
+
+	c)	In pthread_create function, thread_function and pointer to the count variable is passed. pthread_create function gives pointer of count to the thread_function which is going to referred as a local variable in threads. In line 15 this pointer is casted explicitly and incremented for next thread count.
+
+2.	OUTPUT:
+	Thread 1:1 says hi!
+	Thread 1:2 says hi!
+	Thread 1:1 says hi!
+	Thread 1:3 says hi!
+	Thread 1:2 says hi!
+	Thread 1:1 says hi!
+	Thread 2:3 says hi!
+	Thread 2:2 says hi!
+	Thread 2:1 says hi!
+	Thread 3:3 says hi!
+	Thread 3:2 says hi!
+	Thread 3:1 says hi!
+	Thread 4:3 says hi!
+	Thread 4:2 says hi!
+	Thread 5:3 says hi!
+	Main thread says hi!
+
+	Here the '*(int *)arg' pointer variable (count) is taken as a local variable to all threads. As the threads are not joined (commented) they start to execute concurrently. Changing same '*(int *)arg' pointer variable by concurrent threads results this kind of output.
+
+	a)	line 12 commented => 
+	OUTPUT:
+	Thread 1:1 says hi!
+	Thread 1:2 says hi!
+	Thread 1:3 says hi!
+	Thread 2:1 says hi!
+	Thread 2:2 says hi!
+	Thread 2:3 says hi!
+	Thread 3:1 says hi!
+	Thread 3:2 says hi!
+	Thread 3:3 says hi!
+	Thread 4:1 says hi!
+	Thread 4:2 says hi!
+	Thread 4:3 says hi!
+	Thread 5:1 says hi!
+	Thread 5:2 says hi!
+	Thread 5:3 says hi!
+	Main thread says hi!
+
+	Here thread creation happens with a time delay of 1 second(sleep (1)). As soon as the thread created, it prints its output before the 1 second delay ends. This results to print output in order.
+
+	line 35 commented => 
+	OUTPUT:
+	Thread 1:1 says hi!
+	Thread 1:1 says hi!
+	Thread 1:1 says hi!
+	Thread 1:1 says hi!
+	Thread 1:1 says hi!
+	Thread 1:2 says hi!
+	Thread 1:2 says hi!
+	Thread 1:2 says hi!
+	Thread 1:2 says hi!
+	Thread 1:2 says hi!
+	Thread 1:3 says hi!
+	Thread 1:3 says hi!
+	Thread 1:3 says hi!
+	Thread 1:3 says hi!
+	Thread 1:3 says hi!
+	Main thread says hi!
+
+	As threads are not joined here and line 35 is commented all threads are created at once(seems like) and all threads run in concurrent way. Therefore all threads prints the same output for each iteration of output printing for loop. (all threads named as thread 1)
+
+	line 37 commented =>
+	OUTPUT:
+	Thread 1:1 says hi!
+	Thread 1:2 says hi!
+	Thread 1:1 says hi!
+	Thread 1:3 says hi!
+	Thread 1:2 says hi!
+	Thread 1:1 says hi!
+	Thread 2:3 says hi!
+	Thread 2:2 says hi!
+	Thread 2:1 says hi!
+	Thread 3:3 says hi!
+	Thread 3:2 says hi!
+	Thread 3:1 says hi!
+	Main thread says hi!
+
+	Here only 13(out of 15) thread outputs are generated as main thread ends before the all other thread execution finish.(beacuse of the sleep is commented in line 37) Order is also distorted as it takes 3 seconds to print the output from a particular thread and while that time new 3 threads are generated from thread creating function. Those threads start to run concurrently and changes the value of '*(int *)arg' pointer variable (count) which causes to the mess up of the output order.
+
+	b)	i)	line 35 and 37 commented
+		OUTPUT:
+		Main thread says hi!
+
+		As the line 35 is commented all the threads are created and released. But before executing them, main thread ends as the line 37 is commented. Therefore, before printing outputs of the threads main print its output and end the program.
+
+		ii)	line 12 and 35 commented
+		OUTPUT:
+		Thread 1:1 says hi!
+		Thread 1:2 says hi!
+		Thread 1:3 says hi!
+		Thread 1:1 says hi!
+		Thread 2:2 says hi!
+		Thread 2:3 says hi!
+		Thread 1:1 says hi!
+		Thread 3:2 says hi!
+		Thread 3:3 says hi!
+		Thread 4:1 says hi!
+		Thread 4:2 says hi!
+		Thread 4:3 says hi!
+		Thread 5:1 says hi!
+		Thread 5:2 says hi!
+		Thread 5:3 says hi!
+		Main thread says hi!
+
+		As the sleep functions are not inside the thread creating function and output printing function, threads are created and they execute while the outputs are printing. Therefore, output is not in order.
+
+		iii)line 12 and 37 are commented.
+		OUTPUT:
+		Thread 1:1 says hi!
+		Thread 1:2 says hi!
+		Thread 1:3 says hi!
+		Thread 2:1 says hi!
+		Thread 2:2 says hi!
+		Thread 2:3 says hi!
+		Thread 3:1 says hi!
+		Thread 3:2 says hi!
+		Thread 3:3 says hi!
+		Thread 4:1 says hi!
+		Thread 4:2 says hi!
+		Thread 4:3 says hi!
+		Thread 5:1 says hi!
+		Thread 5:2 says hi!
+		Thread 5:3 says hi!
+		Main thread says hi!
+
+		Main thread runs till the end as thread creation happens in 1 second interval. Once a thread is created it prints all its output. Therefore the output is in order.
+
+	c)	OUTPUT:
+		Thread 1:1 says hi!
+		Thread 1:2 says hi!
+		Thread 1:1 says hi!
+		Thread 1:3 says hi!
+		Thread 1:2 says hi!
+		Thread 1:1 says hi!
+		Thread 2:3 says hi!
+		Thread 2:2 says hi!
+		Thread 2:1 says hi!
+		Thread 3:3 says hi!
+		Thread 3:2 says hi!
+		Thread 3:1 says hi!
+		Thread 4:3 says hi!
+		Thread 4:2 says hi!
+		Thread 5:3 says hi!
+		Main thread says hi!
+
+		Once the threads are created in 1 second interval, created threads are printing outputs and changing the common variable value (count). Hence, not in order. But as the main thread waits for a 5 seconds all the outputs are printed.
+
+		sleep ==1
+		Thread 1:1 says hi!
+		Thread 1:2 says hi!
+		Thread 1:1 says hi!
+		Thread 1:3 says hi!
+		Thread 1:2 says hi!
+		Thread 1:1 says hi!
+		Thread 2:3 says hi!
+		Thread 2:2 says hi!
+		Thread 2:1 says hi!
+		Thread 3:3 says hi!
+		Thread 3:2 says hi!
+		Thread 3:1 says hi!
+		Thread 4:3 says hi!
+		Thread 4:2 says hi!
+		Main thread says hi!
+
+		only 14(out of 15) outputs are printed as the main thread ends before the execution of all the threads.
+
+3.	a)	If you use sleeps instead of join calls then you would have find out proper values to sleep times according to the task weight. and also would not be much efficient as	even the task is completed sleep waits untill it resumes.
+
+
+Excerise 4 
+
+1.	
+
+2.	If you use local variable, it will be initialized in main thread's stack. It would be safe to pass the address of that variable to particular threads as stack variables lifetime is longer. But the problem is updating the fd value everytime in while(1) in the same local variable, which will make every thread to use that resulting in undefined behavior. You will have to allocate new variable either in heap or stack for each thread for this reason so that each thread should be able to read correct fd value without any problem.

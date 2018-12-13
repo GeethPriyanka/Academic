@@ -96,15 +96,24 @@ Weighted Avg.    0.921    0.008    0.922      0.921    0.920      0.914    0.976
 
 /////////////////////////////////////
 
-3. classification accuracy is 92.0792 % in above data set.
+3. 
+refer part1_3 image for visualization of algorithm.
+classification accuracy is 92.0792 % in above data set.
+TP avg. = 0.921
+FP avg. = 0.008
 
+A reptile is classified as a fish
+3 insects are classified as invertebrate.
+2 invertebrates are classifed as insects.
+A reptile is classified as an insect.
+An amphibian is classified as reptile. 
 
 
 ////////////////////////////////////
 
 4. 
 
-********(b) using training set************
+********(a) using training set************
 
 === Run information ===
 
@@ -201,9 +210,104 @@ Weighted Avg.    0.990    0.001    0.992      0.990    0.990      0.990    0.999
 
 
 
-**********(b) using 10 fold cross validation*************
+********(b) 10 fold cross-validation***********
 
-given under the 2nd question..
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     zoo
+Instances:    101
+Attributes:   18
+              animalName
+              hair
+              feathers
+              eggs
+              milk
+              airborne
+              aquatic
+              predator
+              toothed
+              backbone
+              breathes
+              venomous
+              fins
+              legs
+              tail
+              domestic
+              catsize
+              type
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+feathers = TRUE: bird (20.0)
+feathers = FALSE
+|   milk = TRUE: mammal (41.0)
+|   milk = FALSE
+|   |   backbone = TRUE
+|   |   |   fins = TRUE: fish (13.0)
+|   |   |   fins = FALSE
+|   |   |   |   tail = TRUE: reptile (6.0/1.0)
+|   |   |   |   tail = FALSE: amphibian (3.0)
+|   |   backbone = FALSE
+|   |   |   airborne = TRUE: insect (6.0)
+|   |   |   airborne = FALSE
+|   |   |   |   predator = TRUE: invertebrate (8.0)
+|   |   |   |   predator = FALSE
+|   |   |   |   |   legs <= 2: invertebrate (2.0)
+|   |   |   |   |   legs > 2: insect (2.0)
+
+Number of Leaves  : 	9
+
+Size of the tree : 	17
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          93               92.0792 %
+Incorrectly Classified Instances         8                7.9208 %
+Kappa statistic                          0.8955
+Mean absolute error                      0.0225
+Root mean squared error                  0.14  
+Relative absolute error                 10.2478 %
+Root relative squared error             42.4398 %
+Total Number of Instances              101     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     mammal
+                 1.000    0.011    0.929      1.000    0.963      0.958    0.994     0.929     fish
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     bird
+                 0.800    0.033    0.727      0.800    0.762      0.735    0.986     0.812     invertebrate
+                 0.625    0.032    0.625      0.625    0.625      0.593    0.920     0.677     insect
+                 0.750    0.000    1.000      0.750    0.857      0.862    0.872     0.760     amphibian
+                 0.600    0.010    0.750      0.600    0.667      0.656    0.793     0.420     reptile
+Weighted Avg.    0.921    0.008    0.922      0.921    0.920      0.914    0.976     0.908     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g   <-- classified as
+ 41  0  0  0  0  0  0 |  a = mammal
+  0 13  0  0  0  0  0 |  b = fish
+  0  0 20  0  0  0  0 |  c = bird
+  0  0  0  8  2  0  0 |  d = invertebrate
+  0  0  0  3  5  0  0 |  e = insect
+  0  0  0  0  0  3  1 |  f = amphibian
+  0  1  0  0  1  0  3 |  g = reptile
+
+
+  classification accuracy using
+  		the training set 			=		99.0099 %
+  		10- fold cross validation 	=		92.0792 %
+
+  		10-fold cross validation is better as it not using same training set as in training set testing option.(even if the accuracy is better in training set here)
 
 
 5. We can't apply ID3 learning algorithm on above data set as they contain numerical attributes. In order to perform ID3 only nominal attributes should contain.
@@ -449,6 +553,8 @@ Weighted Avg.    0.406    0.406    ?          0.406    ?          ?        0.441
   4  0  0  0  0  0  0 |  f = amphibian
   5  0  0  0  0  0  0 |  g = reptile
 
+/////////////
+As zero-R simply predicts the majority class, here it predicts mammal class(41). Since the confusion matrix is classified as all classes into mammal class.
 
 
 
@@ -533,4 +639,303 @@ Weighted Avg.    0.851    0.060    0.794      0.851    0.820      0.784    0.924
   0  0  0  2  6  0  0 |  e = insect
   4  0  0  0  0  0  0 |  f = amphibian
   4  1  0  0  0  0  0 |  g = reptile
+
+/////////////////////
+This chosen algorithm is moderate when comparing to the previous algorithms as the accuracy is 85.1485%. Precision and recall values are also moderate. (Better than zero-R and one-R)
+
+
+
+############## Part 2 #######################
+
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     zoo
+Instances:    81
+Attributes:   18
+              animal
+              hair
+              feathers
+              eggs
+              milk
+              airborne
+              aquatic
+              predator
+              toothed
+              backbone
+              breathes
+              venomous
+              fins
+              legs
+              tail
+              domestic
+              catsize
+              type
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+feathers = false
+|   milk = false
+|   |   toothed = false
+|   |   |   airborne = false: invertebrate (8.0/1.0)
+|   |   |   airborne = true: insect (5.0)
+|   |   toothed = true
+|   |   |   fins = false
+|   |   |   |   legs <= 2: reptile (3.0)
+|   |   |   |   legs > 2: amphibian (3.0)
+|   |   |   fins = true: fish (10.0)
+|   milk = true: mammal (36.0)
+feathers = true: bird (16.0)
+
+Number of Leaves  : 	7
+
+Size of the tree : 	13
+
+
+Time taken to build model: 0.01 seconds
+
+=== Predictions on test set ===
+
+    inst#     actual  predicted error prediction
+        1 7:invertebrate 7:invertebrate       0.875 
+        2     4:fish     4:fish       1 
+        3     2:bird     2:bird       1 
+        4   1:mammal   1:mammal       1 
+        5 7:invertebrate 7:invertebrate       0.875 
+        6     4:fish     4:fish       1 
+        7     2:bird     2:bird       1 
+        8   6:insect 7:invertebrate   +   0.875 
+        9 5:amphibian 5:amphibian       1 
+       10  3:reptile 7:invertebrate   +   0.875 
+       11  3:reptile 5:amphibian   +   1 
+       12     4:fish     4:fish       1 
+       13   1:mammal   1:mammal       1 
+       14   1:mammal   1:mammal       1 
+       15     2:bird     2:bird       1 
+       16   1:mammal   1:mammal       1 
+       17   6:insect   6:insect       1 
+       18   1:mammal   1:mammal       1 
+       19 7:invertebrate 7:invertebrate       0.875 
+       20     2:bird     2:bird       1 
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.09 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          17               85      %
+Incorrectly Classified Instances         3               15      %
+Kappa statistic                          0.8187
+Mean absolute error                      0.0464
+Root mean squared error                  0.1965
+Relative absolute error                 20.0843 %
+Root relative squared error             55.849  %
+Total Number of Instances               20     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     mammal
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     bird
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.100     reptile
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     fish
+                 1.000    0.053    0.500      1.000    0.667      0.688    0.974     0.500     amphibian
+                 0.500    0.000    1.000      0.500    0.667      0.688    0.944     0.667     insect
+                 1.000    0.118    0.600      1.000    0.750      0.728    0.941     0.600     invertebrate
+Weighted Avg.    0.850    0.020    ?          0.850    ?          ?        0.934     0.792     
+
+=== Confusion Matrix ===
+
+ a b c d e f g   <-- classified as
+ 5 0 0 0 0 0 0 | a = mammal
+ 0 4 0 0 0 0 0 | b = bird
+ 0 0 0 0 1 0 1 | c = reptile
+ 0 0 0 3 0 0 0 | d = fish
+ 0 0 0 0 1 0 0 | e = amphibian
+ 0 0 0 0 0 1 1 | f = insect
+ 0 0 0 0 0 0 3 | g = invertebrate
+
+
+
+
+ ############### Exercise ######################
+
+
+ === Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     zoo
+Instances:    81
+Attributes:   18
+              animal
+              hair
+              feathers
+              eggs
+              milk
+              airborne
+              aquatic
+              predator
+              toothed
+              backbone
+              breathes
+              venomous
+              fins
+              legs
+              tail
+              domestic
+              catsize
+              type
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+feathers = false
+|   milk = false
+|   |   toothed = false
+|   |   |   airborne = false: invertebrate (8.0/1.0)
+|   |   |   airborne = true: insect (5.0)
+|   |   toothed = true
+|   |   |   fins = false
+|   |   |   |   legs <= 2: reptile (3.0)
+|   |   |   |   legs > 2: amphibian (3.0)
+|   |   |   fins = true: fish (10.0)
+|   milk = true: mammal (36.0)
+feathers = true: bird (16.0)
+
+Number of Leaves  : 	7
+
+Size of the tree : 	13
+
+
+Time taken to build model: 0.01 seconds
+
+=== Predictions on test set ===
+
+    inst#     actual  predicted error prediction
+        1 7:invertebrate 7:invertebrate       0.875 
+        2     4:fish     4:fish       1 
+        3     2:bird     2:bird       1 
+        4   1:mammal   1:mammal       1 
+        5 7:invertebrate 7:invertebrate       0.875 
+        6     4:fish     4:fish       1 
+        7     2:bird     2:bird       1 
+        8   6:insect 7:invertebrate   +   0.875 
+        9 5:amphibian 5:amphibian       1 
+       10  3:reptile 7:invertebrate   +   0.875 
+       11  3:reptile 5:amphibian   +   1 
+       12     4:fish     4:fish       1 
+       13   1:mammal   1:mammal       1 
+       14   1:mammal   1:mammal       1 
+       15     2:bird     2:bird       1 
+       16   1:mammal   1:mammal       1 
+       17   6:insect   6:insect       1 
+       18   1:mammal   1:mammal       1 
+       19 7:invertebrate 7:invertebrate       0.875 
+       20     2:bird     2:bird       1 
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.09 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          17               85      %
+Incorrectly Classified Instances         3               15      %
+Kappa statistic                          0.8187
+Mean absolute error                      0.0464
+Root mean squared error                  0.1965
+Relative absolute error                 20.0843 %
+Root relative squared error             55.849  %
+Total Number of Instances               20     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     mammal
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     bird
+                 0.000    0.000    ?          0.000    ?          ?        0.500     0.100     reptile
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     fish
+                 1.000    0.053    0.500      1.000    0.667      0.688    0.974     0.500     amphibian
+                 0.500    0.000    1.000      0.500    0.667      0.688    0.944     0.667     insect
+                 1.000    0.118    0.600      1.000    0.750      0.728    0.941     0.600     invertebrate
+Weighted Avg.    0.850    0.020    ?          0.850    ?          ?        0.934     0.792     
+
+=== Confusion Matrix ===
+
+ a b c d e f g   <-- classified as
+ 5 0 0 0 0 0 0 | a = mammal
+ 0 4 0 0 0 0 0 | b = bird
+ 0 0 0 0 1 0 1 | c = reptile
+ 0 0 0 3 0 0 0 | d = fish
+ 0 0 0 0 1 0 0 | e = amphibian
+ 0 0 0 0 0 1 1 | f = insect
+ 0 0 0 0 0 0 3 | g = invertebrate
+
+
+=== Re-evaluation on test set ===
+
+User supplied test set
+Relation:     zoo
+Instances:     unknown (yet). Reading incrementally
+Attributes:   18
+
+=== Predictions on user test set ===
+
+    inst#     actual  predicted error prediction
+        1        1:? 7:invertebrate       0.875 
+        2        1:?     4:fish       1 
+        3        1:?     2:bird       1 
+        4        1:?   1:mammal       1 
+        5        1:? 7:invertebrate       0.875 
+        6        1:?     4:fish       1 
+        7        1:?     2:bird       1 
+        8        1:? 7:invertebrate       0.875 
+        9        1:? 5:amphibian       1 
+       10        1:? 7:invertebrate       0.875 
+       11        1:? 5:amphibian       1 
+       12        1:?     4:fish       1 
+       13        1:?   1:mammal       1 
+       14        1:?   1:mammal       1 
+       15        1:?     2:bird       1 
+       16        1:?   1:mammal       1 
+       17        1:?   6:insect       1 
+       18        1:?   1:mammal       1 
+       19        1:? 7:invertebrate       0.875 
+       20        1:?     2:bird       1 
+
+=== Summary ===
+
+Total Number of Instances                0     
+Ignored Class Unknown Instances                 20     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 ?        ?        ?          ?        ?          ?        ?         ?         mammal
+                 ?        ?        ?          ?        ?          ?        ?         ?         bird
+                 ?        ?        ?          ?        ?          ?        ?         ?         reptile
+                 ?        ?        ?          ?        ?          ?        ?         ?         fish
+                 ?        ?        ?          ?        ?          ?        ?         ?         amphibian
+                 ?        ?        ?          ?        ?          ?        ?         ?         insect
+                 ?        ?        ?          ?        ?          ?        ?         ?         invertebrate
+Weighted Avg.    ?        ?        ?          ?        ?          ?        ?         ?         
+
+=== Confusion Matrix ===
+
+ a b c d e f g   <-- classified as
+ 0 0 0 0 0 0 0 | a = mammal
+ 0 0 0 0 0 0 0 | b = bird
+ 0 0 0 0 0 0 0 | c = reptile
+ 0 0 0 0 0 0 0 | d = fish
+ 0 0 0 0 0 0 0 | e = amphibian
+ 0 0 0 0 0 0 0 | f = insect
+ 0 0 0 0 0 0 0 | g = invertebrate
 
